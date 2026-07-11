@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api' })
+// En dev, Vite hace proxy de /api al backend local (ver vite.config.ts).
+// En producción, si el frontend y el backend quedan en dominios distintos
+// (ej. frontend en Vercel/Netlify, backend en Railway), se debe definir
+// VITE_API_URL con la URL pública del backend (incluyendo /api).
+const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || '/api' })
 
 // Inyecta el JWT en cada request automáticamente
 api.interceptors.request.use((config) => {
