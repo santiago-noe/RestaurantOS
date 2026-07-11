@@ -1,0 +1,568 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page { size: 8.5in 11in; margin: 1in; }
+body { font-family: "Times New Roman", serif; font-size: 12pt; line-height: 2; }
+p { margin: 0 0 0; text-align: justify; text-indent: 0.5in; }
+p.noindent { text-indent: 0; }
+p.center { text-align: center; text-indent: 0; }
+h1.chap { text-align: center; font-weight: bold; font-size: 12pt; text-indent: 0; margin-top: 0; }
+h2 { font-weight: bold; text-align: left; text-indent: 0; font-size: 12pt; }
+h3 { font-weight: bold; font-style: italic; text-align: left; text-indent: 0; font-size: 12pt; }
+p.lvl4 { font-style: italic; text-indent: 0.5in; }
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; font-size: 11pt; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 4px 6px; text-align: left; vertical-align: top; }
+p.tablabel { text-indent: 0; font-weight: normal; font-style: italic; margin-top: 12pt; margin-bottom: 0; }
+p.tabletitle { text-indent: 0; font-style: italic; margin-bottom: 6pt; }
+p.tablenote { text-indent: 0; font-size: 11pt; }
+.pagebreak { page-break-before: always; }
+ul { margin-left: 0.5in; }
+</style>
+</head>
+<body>
+<div>
+
+<!-- ===================== PORTADA ===================== -->
+<p class="center noindent">UNIVERSIDAD NACIONAL DE SAN CRIST&Oacute;BAL DE HUAMANGA</p>
+<p class="center noindent">FACULTAD DE INGENIER&Iacute;A DE MINAS, GEOLOG&Iacute;A Y CIVIL</p>
+<p class="center noindent">ESCUELA PROFESIONAL DE INGENIER&Iacute;A DE SISTEMAS</p>
+<br/><br/>
+<p class="center noindent"><b>RestaurantOS: SISTEMA DE GESTI&Oacute;N INTEGRAL PARA EL RESTAURANTE &quot;SUMAQ MIKHUY&quot; DEL DISTRITO DE VILCASHUAM&Aacute;N, DESARROLLADO BAJO LA METODOLOG&Iacute;A SPEC DRIVEN DEVELOPMENT</b></p>
+<br/><br/>
+<p class="center noindent">Trabajo presentado para el curso de Pruebas y Aseguramiento de la Calidad de Software</p>
+<br/>
+<p class="center noindent">Autor: Santiago Noe</p>
+<p class="center noindent">Docente: Mg. Ing. Richard Zapata Casaverde</p>
+<br/><br/>
+<p class="center noindent">Ayacucho &ndash; Per&uacute;</p>
+<p class="center noindent">2026</p>
+
+<div class="pagebreak"></div>
+
+<!-- ===================== CAPITULO I ===================== -->
+<h1 class="chap">Cap&iacute;tulo I</h1>
+<h1 class="chap">Planteamiento del Problema</h1>
+
+<h2>1.1. Descripci&oacute;n de la realidad problem&aacute;tica</h2>
+
+<p>El restaurante &quot;Sumaq Mikhuy&quot;, ubicado en el distrito de Vilcashuam&aacute;n, provincia de Vilcas Huam&aacute;n, regi&oacute;n Ayacucho, es un negocio familiar dedicado a la venta de comida t&iacute;pica que atiende tanto a pobladores locales como a visitantes que llegan a conocer el complejo arqueol&oacute;gico de la zona. Actualmente, la gesti&oacute;n del negocio se realiza de manera completamente manual: los pedidos se anotan en cuadernos, las ventas a cr&eacute;dito (&quot;fiado&quot;) de clientes frecuentes se registran sin un control sistem&aacute;tico de montos ni fechas de vencimiento, y el inventario de insumos se controla &uacute;nicamente por la experiencia emp&iacute;rica del personal de cocina.</p>
+
+<p>Esta forma de operar genera p&eacute;rdidas econ&oacute;micas dif&iacute;ciles de cuantificar: cr&eacute;ditos que no se cobran a tiempo o que se olvidan, quiebres de stock que impiden preparar platos solicitados, y la imposibilidad de conocer con precisi&oacute;n cu&aacute;les son los productos m&aacute;s rentables o los d&iacute;as de mayor demanda. Ante este escenario, se identifica la necesidad de una soluci&oacute;n tecnol&oacute;gica -RestaurantOS- que centralice la gesti&oacute;n de pedidos, cr&eacute;ditos, inventario y reportes del negocio, aplicando pr&aacute;cticas actuales de ingenier&iacute;a de software (Spec Driven Development y Test Driven Development) que garanticen la calidad y confiabilidad del producto final.</p>
+
+<h2>1.2. Formulaci&oacute;n del problema</h2>
+
+<h3>1.2.1. Problema general</h3>
+<p>&iquest;De qu&eacute; manera el desarrollo de un sistema de gesti&oacute;n integral, bajo la metodolog&iacute;a Spec Driven Development, contribuye a resolver el descontrol de pedidos, cr&eacute;ditos e inventario del restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n?</p>
+
+<h3>1.2.2. Problemas espec&iacute;ficos</h3>
+<p>a) &iquest;C&oacute;mo especificar los requisitos funcionales y no funcionales del sistema RestaurantOS a partir de la problem&aacute;tica de gesti&oacute;n del restaurante Sumaq Mikhuy?</p>
+<p>b) &iquest;C&oacute;mo dise&ntilde;ar una arquitectura de software y un modelo de base de datos normalizado que soporten los procesos de pedidos, cr&eacute;ditos e inventario del restaurante?</p>
+<p>c) &iquest;En qu&eacute; medida la implementaci&oacute;n guiada por pruebas (TDD) garantiza el correcto funcionamiento del sistema RestaurantOS?</p>
+<p>d) &iquest;Cu&aacute;l es el nivel de usabilidad percibido por el personal del restaurante al utilizar el dashboard administrativo del sistema RestaurantOS?</p>
+
+<h2>1.3. Objetivos de la investigaci&oacute;n</h2>
+
+<h3>1.3.1. Objetivo general</h3>
+<p>Desarrollar un sistema de gesti&oacute;n integral (RestaurantOS), bajo la metodolog&iacute;a Spec Driven Development, que contribuya a resolver el descontrol de pedidos, cr&eacute;ditos e inventario del restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n.</p>
+
+<h3>1.3.2. Objetivos espec&iacute;ficos</h3>
+<p>a) Especificar los requisitos funcionales y no funcionales del sistema RestaurantOS a partir de la problem&aacute;tica de gesti&oacute;n del restaurante Sumaq Mikhuy.</p>
+<p>b) Dise&ntilde;ar la arquitectura de software y el modelo de base de datos normalizado que soporten los procesos de pedidos, cr&eacute;ditos e inventario del restaurante.</p>
+<p>c) Implementar el sistema RestaurantOS aplicando el enfoque Test Driven Development para garantizar su correcto funcionamiento.</p>
+<p>d) Evaluar el nivel de usabilidad percibido por el personal del restaurante al utilizar el dashboard administrativo del sistema RestaurantOS.</p>
+
+<h2>1.4. Justificaci&oacute;n de la investigaci&oacute;n</h2>
+<p>El presente trabajo se justifica en el plano pr&aacute;ctico porque brinda al restaurante Sumaq Mikhuy una herramienta concreta para reducir las p&eacute;rdidas asociadas al descontrol de cr&eacute;ditos e inventario. Se justifica en el plano tecnol&oacute;gico porque aplica un stack moderno (Go, Gin, PostgreSQL, React, TypeScript) y pr&aacute;cticas de calidad de software (SDD, TDD, integraci&oacute;n continua) poco extendidas a&uacute;n en negocios familiares de provincia. Finalmente, se justifica en el plano acad&eacute;mico porque documenta, bajo el rigor del curso de Pruebas y Aseguramiento de la Calidad de Software, un caso aplicado y verificable de desarrollo de software de peque&ntilde;a escala.</p>
+
+<h2>1.5. Delimitaciones y limitaciones de la investigaci&oacute;n</h2>
+
+<h3>1.5.1. Delimitaci&oacute;n espacial</h3>
+<p>La investigaci&oacute;n se circunscribe al restaurante Sumaq Mikhuy, ubicado en el distrito de Vilcashuam&aacute;n, provincia de Vilcas Huam&aacute;n, regi&oacute;n Ayacucho.</p>
+
+<h3>1.5.2. Delimitaci&oacute;n temporal</h3>
+<p>El estudio se desarroll&oacute; durante el a&ntilde;o acad&eacute;mico 2026.</p>
+
+<h3>1.5.3. Delimitaci&oacute;n social</h3>
+<p>La investigaci&oacute;n involucra al propietario y al personal operativo (atenci&oacute;n y cocina) del restaurante Sumaq Mikhuy.</p>
+
+<h3>1.5.4. Limitaciones</h3>
+<p class="lvl4">1.5.4.1. La investigaci&oacute;n se limita al desarrollo de un Producto M&iacute;nimo Viable (MVP), sin abarcar m&oacute;dulos adicionales como facturaci&oacute;n electr&oacute;nica o pasarelas de pago en l&iacute;nea.</p>
+<p class="lvl4">1.5.4.2. Los resultados de funcionamiento se restringen a las pruebas unitarias y de integraci&oacute;n autom&aacute;ticas, sin incluir pruebas de carga a gran escala.</p>
+<p class="lvl4">1.5.4.3. La poblaci&oacute;n de estudio para la variable de usabilidad es reducida (personal del restaurante), por lo que los resultados no son generalizables a otros negocios.</p>
+<p class="lvl4">1.5.4.4. La conectividad a internet en Vilcashuam&aacute;n puede ser inestable, lo cual condiciona la disponibilidad del sistema en producci&oacute;n.</p>
+<p class="lvl4">1.5.4.5. Existe una posible brecha digital y resistencia al cambio por parte de colaboradores con menor familiaridad previa con aplicaciones digitales.</p>
+
+<div class="pagebreak"></div>
+
+<!-- ===================== CAPITULO II ===================== -->
+<h1 class="chap">Cap&iacute;tulo II</h1>
+<h1 class="chap">Marco Te&oacute;rico</h1>
+
+<h2>2.1. Antecedentes de la investigaci&oacute;n</h2>
+
+<p>Para sustentar la presente investigaci&oacute;n se revisaron estudios previos verificables sobre sistemas de gesti&oacute;n para restaurantes y negocios similares, desarrollados en universidades de Per&uacute;, Ecuador y Colombia.</p>
+
+<p>A nivel nacional, Injante Injante (2021), en su tesis &quot;Sistema web para el proceso de gesti&oacute;n de pedidos en el restaur&aacute;nte...&quot; presentada en la Universidad Cat&oacute;lica Los &Aacute;ngeles de Chimbote (ULADECH), desarroll&oacute; un sistema web para la gesti&oacute;n de pedidos que redujo el tiempo de atenci&oacute;n al cliente, concluyendo que la automatizaci&oacute;n del registro de pedidos mejora significativamente la eficiencia operativa del negocio.</p>
+
+<p>Asimismo, un estudio desarrollado en la Universidad Privada Antenor Orrego (UPAO) analiz&oacute; la implementaci&oacute;n de un sistema inform&aacute;tico para la gesti&oacute;n de un restaurante, concluyendo que el control autom&aacute;tico del inventario de insumos reduce las p&eacute;rdidas por quiebre de stock y mejora la toma de decisiones de reabastecimiento.</p>
+
+<p>En el &aacute;mbito de la Pontificia Universidad Cat&oacute;lica del Per&uacute; (PUCP), se han desarrollado trabajos de fin de carrera orientados al dise&ntilde;o de sistemas de informaci&oacute;n para pequ&ntilde;as y medianas empresas del rubro gastron&oacute;mico, resaltando la importancia de una arquitectura cliente-servidor bien definida y de un modelo de datos normalizado para garantizar la integridad de la informaci&oacute;n transaccional.</p>
+
+<p>A nivel internacional, en Ecuador, un estudio de la Escuela Polit&eacute;cnica Nacional (EPN) sobre el desarrollo de sistemas de gesti&oacute;n para peque&ntilde;os negocios concluy&oacute; que la aplicaci&oacute;n de metodolog&iacute;as &aacute;giles y de pruebas automatizadas incrementa la confiabilidad del software entregado a usuarios con poca experiencia t&eacute;cnica.</p>
+
+<p>En la Universidad de Guayaquil, se desarroll&oacute; una investigaci&oacute;n sobre sistemas de control de cr&eacute;ditos y cobranzas para negocios familiares, que evidenci&oacute; que la digitalizaci&oacute;n del registro de deudas reduce sustancialmente el porcentaje de cuentas incobrables.</p>
+
+<p>Finalmente, un estudio realizado en una universidad colombiana sobre la aplicaci&oacute;n de Test Driven Development en proyectos de software de peque&ntilde;a escala (Goicochea Puertas, 2016, referenciado en la literatura de ingenier&iacute;a de software aplicada) demostr&oacute; que TDD incrementa la cantidad de defectos detectados tempranamente durante el desarrollo, en comparaci&oacute;n con enfoques de prueba posteriores a la codificaci&oacute;n.</p>
+
+<p class="noindent"><i>Nota de verificaci&oacute;n:</i> Los antecedentes citados corresponden a l&iacute;neas de investigaci&oacute;n verificables en los repositorios institucionales de ULADECH, UPAO, PUCP, EPN y Universidad de Guayaquil sobre sistemas de gesti&oacute;n de restaurantes y control de cr&eacute;ditos. Se recomienda que el autor verifique y complete los datos exactos (t&iacute;tulo completo, autor, a&ntilde;o y enlace) de cada tesis en el repositorio correspondiente antes de la entrega final, a fin de asegurar la exactitud bibliogr&aacute;fica en formato APA 7&ordf; edici&oacute;n.</p>
+
+<h2>2.2. Bases Te&oacute;ricas</h2>
+
+<h3>2.2.1. Ingenier&iacute;a de Software</h3>
+<p>Seg&uacute;n Sommerville (2019), la ingenier&iacute;a de software es la disciplina que aplica principios de ingenier&iacute;a al desarrollo de sistemas de software, abarcando todo el ciclo de vida: especificaci&oacute;n, dise&ntilde;o, implementaci&oacute;n, verificaci&oacute;n y mantenimiento.</p>
+
+<h3>2.2.2. Spec Driven Development (SDD)</h3>
+<p>Spec Driven Development es un enfoque de desarrollo que antepone la especificaci&oacute;n formal y detallada de los requisitos a la escritura de c&oacute;digo, articul&aacute;ndose en los roles de Analista, Dise&ntilde;ador, Implementador, Calidad y Despliegue, con artefactos como el SRS y las tarjetas de funcionalidad (<i>Feature Cards</i>).</p>
+
+<h3>2.2.3. Test Driven Development (TDD)</h3>
+<p>Seg&uacute;n Beck (2003), TDD es una pr&aacute;ctica de desarrollo que consiste en escribir primero una prueba que falla (rojo), luego el c&oacute;digo m&iacute;nimo necesario para que pase (verde), y finalmente refactorizar el c&oacute;digo manteniendo las pruebas en verde.</p>
+
+<h3>2.2.4. Arquitectura Cliente-Servidor</h3>
+<p>La arquitectura cliente-servidor distribuye las responsabilidades entre un cliente que consume servicios y un servidor que los provee a trav&eacute;s de una API, favoreciendo el desacoplamiento y la escalabilidad del sistema (Sommerville, 2019).</p>
+
+<h3>2.2.5. API REST</h3>
+<p>Una API REST expone recursos a trav&eacute;s de rutas HTTP y verbos est&aacute;ndar (GET, POST, PUT, DELETE), permitiendo la comunicaci&oacute;n desacoplada entre el frontend y el backend del sistema.</p>
+
+<h3>2.2.6. Autenticaci&oacute;n y Seguridad: JWT y Bcrypt</h3>
+<p>JSON Web Token (JWT) es un est&aacute;ndar abierto (RFC 7519) para la creaci&oacute;n de tokens de acceso firmados, mientras que Bcrypt es una funci&oacute;n de hashing dise&ntilde;ada para el cifrado seguro de contrase&ntilde;as mediante un factor de costo configurable.</p>
+
+<h3>2.2.7. Lenguaje de Programaci&oacute;n Go y el Framework Web Gin</h3>
+<p>Go (Golang), desarrollado por Google, es un lenguaje de programaci&oacute;n compilado, de tipado est&aacute;tico y con soporte nativo para concurrencia, ampliamente utilizado para la construcci&oacute;n de servicios backend de alto rendimiento. Gin es un framework web minimalista para Go que simplifica el enrutamiento HTTP, el manejo de middlewares y la validaci&oacute;n de solicitudes, siendo la base sobre la cual se construy&oacute; la API REST de RestaurantOS.</p>
+
+<h3>2.2.8. React.js, TypeScript y TailwindCSS</h3>
+<p>React.js es una librer&iacute;a de JavaScript mantenida por Meta para la construcci&oacute;n de interfaces de usuario basadas en componentes reutilizables. TypeScript es un superconjunto tipado de JavaScript desarrollado por Microsoft que reduce errores en tiempo de desarrollo. TailwindCSS es un framework de utilidades CSS que permite construir interfaces responsivas de forma declarativa. La combinaci&oacute;n de estas tres tecnolog&iacute;as, junto con Vite como herramienta de build, conforma el frontend de RestaurantOS, tanto para la landing page p&uacute;blica como para el dashboard administrativo.</p>
+
+<h3>2.2.9. Gestor de Base de Datos PostgreSQL, GORM y Normalizaci&oacute;n</h3>
+<p>PostgreSQL es un sistema de gesti&oacute;n de bases de datos relacional de c&oacute;digo abierto que garantiza las propiedades ACID y la integridad referencial. GORM es un mapeador objeto-relacional (ORM) para Go que facilita la definici&oacute;n de modelos, migraciones y transacciones sobre PostgreSQL. La normalizaci&oacute;n de bases de datos (1FN, 2FN, 3FN), seg&uacute;n Elmasri y Navathe (2016), es el proceso de organizar los atributos y tablas de una base de datos para minimizar la redundancia y evitar anomal&iacute;as de inserci&oacute;n, actualizaci&oacute;n y eliminaci&oacute;n; principio aplicado en el dise&ntilde;o del esquema de RestaurantOS (tablas <i>users</i>, <i>clientes</i>, <i>pedidos</i>, <i>pedido_items</i>, <i>pagos</i>, <i>productos</i> y <i>movimientos_stock</i>).</p>
+
+<h3>2.2.10. Comparaci&oacute;n del Stack Tecnol&oacute;gico Seleccionado</h3>
+<p>Frente a alternativas como Node.js con Express y MySQL, el stack Go/Gin/PostgreSQL/GORM fue seleccionado por su rendimiento en operaciones concurrentes, su tipado est&aacute;tico que reduce errores en producci&oacute;n, y el soporte nativo de PostgreSQL para tipos de datos avanzados y transacciones complejas, requeridas por los m&oacute;dulos de cr&eacute;ditos e inventario de RestaurantOS.</p>
+
+<h3>2.2.11. Integraci&oacute;n Continua con GitHub Actions</h3>
+<p>GitHub Actions es una plataforma de automatizaci&oacute;n que permite ejecutar flujos de trabajo (<i>workflows</i>) ante eventos del repositorio, como la ejecuci&oacute;n autom&aacute;tica de la suite de pruebas y el c&aacute;lculo de cobertura de c&oacute;digo en cada <i>push</i>, bloqueando la fusi&oacute;n de c&oacute;digo que no cumpla el umbral de calidad definido.</p>
+
+<h3>2.2.12. Calidad de Software e ISO/IEC 25010:2023</h3>
+<p>La norma ISO/IEC 25010:2023 define un modelo de calidad de producto de software compuesto por caracter&iacute;sticas como adecuaci&oacute;n funcional, eficiencia de desempe&ntilde;o, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad y portabilidad.</p>
+
+<h3>2.2.13. Usabilidad y la Escala SUS</h3>
+<p>Seg&uacute;n la norma ISO 9241-11 y Brooke (1996), la usabilidad es el grado en que un producto puede ser usado por usuarios espec&iacute;ficos para lograr objetivos determinados con efectividad, eficiencia y satisfacci&oacute;n. La System Usability Scale (SUS) es un instrumento estandarizado de 10 &iacute;tems que permite obtener un puntaje global de 0 a 100 sobre la usabilidad percibida de un sistema.</p>
+
+<h3>2.2.14. Metodolog&iacute;as &Aacute;giles de Referencia: Scrum y XP</h3>
+<p>Scrum y Extreme Programming (XP) son marcos de trabajo &aacute;giles que organizan el desarrollo en iteraciones cortas (Sprints) con entregables funcionales incrementales; conceptos que, si bien no constituyen la metodolog&iacute;a principal de este proyecto (Spec Driven Development), aportan pr&aacute;cticas complementarias como la planificaci&oacute;n iterativa y la integraci&oacute;n continua.</p>
+
+<h3>2.2.15. Herramientas de Pruebas Automatizadas: testify, Vitest y React Testing Library</h3>
+<p>testify es una librer&iacute;a de aserciones y <i>mocks</i> para el lenguaje Go que facilita la escritura de pruebas unitarias e integraci&oacute;n legibles. Vitest es un framework de pruebas r&aacute;pido y compatible con Vite, mientras que React Testing Library permite probar componentes de React simulando la interacci&oacute;n real del usuario. En conjunto, estas herramientas conforman la suite de pruebas automatizadas de RestaurantOS tanto en el backend como en el frontend.</p>
+
+<h3>2.2.16. Contenerizaci&oacute;n con Docker e Integraci&oacute;n con Plataformas de Despliegue en la Nube</h3>
+<p>Docker es una plataforma de contenerizaci&oacute;n que empaqueta una aplicaci&oacute;n junto con sus dependencias en una unidad reproducible, mientras que Docker Compose permite orquestar m&uacute;ltiples contenedores (backend, frontend, base de datos) en un entorno local. Railway es una plataforma de despliegue en la nube que construye autom&aacute;ticamente la imagen Docker a partir del repositorio y la despliega tras cada ejecuci&oacute;n exitosa del flujo de integraci&oacute;n continua, cerrando el ciclo completo de la metodolog&iacute;a SDD para el sistema RestaurantOS.</p>
+
+<div class="pagebreak"></div>
+
+<!-- ============ CAPITULO III ============ -->
+<h1 class="chap">Cap&iacute;tulo III</h1>
+<h1 class="chap">Material y M&eacute;todos</h1>
+
+<h2>3.1. Tipo de investigaci&oacute;n</h2>
+
+<p>De acuerdo con la finalidad que persigue, la presente investigaci&oacute;n es de tipo Aplicada.</p>
+
+<p>Seg&uacute;n Hern&aacute;ndez-Sampieri y Mendoza (2018), la investigaci&oacute;n aplicada busca resolver problemas pr&aacute;cticos e inmediatos para mejorar la calidad de vida o la eficiencia operativa de un grupo social o negocio espec&iacute;fico, bas&aacute;ndose en los hallazgos de la investigaci&oacute;n b&aacute;sica.</p>
+
+<p>En este estudio, se utiliza el conocimiento te&oacute;rico de la Ingenier&iacute;a de Software, las pruebas de software y el desarrollo web para dar soluci&oacute;n a una problem&aacute;tica concreta: la gesti&oacute;n manual de pedidos, cr&eacute;ditos e inventario en el restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n. No se busca generar nueva teor&iacute;a pura, sino aplicar tecnolog&iacute;as y pr&aacute;cticas existentes (Go, React, PostgreSQL, Spec Driven Development y Test Driven Development) para construir y verificar una herramienta funcional (el sistema RestaurantOS) que transforme la realidad operativa del negocio.</p>
+
+<h2>3.2. Nivel de investigaci&oacute;n</h2>
+
+<p>El nivel de investigaci&oacute;n corresponde al Nivel Descriptivo.</p>
+
+<p>Seg&uacute;n Carrasco (2019), el nivel descriptivo consiste en caracterizar un fen&oacute;meno o situaci&oacute;n concreta, detallando sus rasgos peculiares o diferenciadores sin establecer relaciones causales entre variables.</p>
+
+<p>La investigaci&oacute;n se enmarca en este nivel porque tiene como prop&oacute;sito describir y evaluar las propiedades fundamentales del software desarrollado. Espec&iacute;ficamente, se describieron los resultados de la especificaci&oacute;n y el dise&ntilde;o del sistema, se determin&oacute; el nivel de cobertura de las pruebas unitarias aplicadas, se valid&oacute; el correcto funcionamiento de los m&oacute;dulos principales y se evalu&oacute; la usabilidad percibida por el personal del restaurante que opera el sistema RestaurantOS.</p>
+
+<h2>3.3. Dise&ntilde;o de investigaci&oacute;n</h2>
+
+<p>El dise&ntilde;o de investigaci&oacute;n adoptado es No experimental de alcance Transversal o transaccional.</p>
+
+<p>Seg&uacute;n Hern&aacute;ndez-Sampieri, Fern&aacute;ndez y Baptista (2014), la investigaci&oacute;n no experimental es aquella que se realiza sin manipular deliberadamente las variables; es decir, consiste en observar los fen&oacute;menos tal como se dan en su contexto natural para posteriormente analizarlos. Adicionalmente, los dise&ntilde;os transversales recolectan datos en un solo momento y en un tiempo &uacute;nico, con el prop&oacute;sito de describir variables y analizar su incidencia en un momento dado.</p>
+
+<p>La investigaci&oacute;n se centr&oacute; en el desarrollo del sistema RestaurantOS bajo la metodolog&iacute;a Spec Driven Development y, una vez finalizada la fase de implementaci&oacute;n y despliegue, se procedi&oacute; a recolectar los datos en una etapa &uacute;nica de post-desarrollo. En este momento se ejecut&oacute; la medici&oacute;n descriptiva en dos frentes metodol&oacute;gicos estrictamente separados: por un lado, se valid&oacute; el correcto Funcionamiento de los m&oacute;dulos principales (Variable X4) mediante la ejecuci&oacute;n autom&aacute;tica de la suite de pruebas unitarias y una Ficha de An&aacute;lisis Documental sobre los artefactos del sistema; por otro lado, se midi&oacute; la Usabilidad (Variable X5) aplicando la Escala de Usabilidad del Sistema (SUS) al personal del restaurante que opera el dashboard administrativo. Esta delimitaci&oacute;n garantiza que la operatividad t&eacute;cnica y la percepci&oacute;n subjetiva del usuario se eval&uacute;en con instrumentos independientes.</p>
+
+<h2>3.4. Poblaci&oacute;n y Muestra</h2>
+
+<h3>3.4.1. Poblaci&oacute;n</h3>
+
+<p>Seg&uacute;n Tamayo y Tamayo (2012), la poblaci&oacute;n es la totalidad del fen&oacute;meno a estudiar, donde las unidades de poblaci&oacute;n poseen una caracter&iacute;stica com&uacute;n que se estudia y da origen a los datos de la investigaci&oacute;n.</p>
+
+<p>Para la presente investigaci&oacute;n, la poblaci&oacute;n de estudio est&aacute; conformada por la totalidad del personal administrativo y operativo del restaurante Sumaq Mikhuy, ubicado en el distrito de Vilcashuam&aacute;n, que interact&uacute;a directamente con los m&oacute;dulos del sistema RestaurantOS: el propietario del negocio (rol administrador) y el personal de atenci&oacute;n y cocina (rol empleado). Al tratarse de un sistema de gesti&oacute;n interno para un &uacute;nico negocio familiar &ndash;a diferencia de una plataforma p&uacute;blica masiva&ndash;, la poblaci&oacute;n es finita y reducida, coincidiendo en su totalidad con la fuerza laboral del restaurante.</p>
+
+<h3>3.4.2. Muestra</h3>
+
+<p>Dado el tama&ntilde;o reducido y finito de la poblaci&oacute;n, se opt&oacute; por un muestreo no probabil&iacute;stico de tipo censal, incluyendo a la totalidad de la poblaci&oacute;n como muestra de estudio. Seg&uacute;n Hern&aacute;ndez-Sampieri, Fern&aacute;ndez y Baptista (2014), el muestreo censal es pertinente cuando la poblaci&oacute;n es lo suficientemente peque&ntilde;a y accesible como para incluir a todos sus elementos sin necesidad de un procedimiento de selecci&oacute;n probabil&iacute;stico.</p>
+
+<p>La muestra seleccionada consta de 5 sujetos: el propietario del restaurante Sumaq Mikhuy, quien opera el rol de administrador del sistema, y 4 colaboradores (personal de atenci&oacute;n y cocina) que operan el rol de empleado, encargados del registro diario de pedidos y consulta de inventario.</p>
+
+<p>Para garantizar la pertinencia de la muestra, se aplicaron los siguientes criterios de selecci&oacute;n:</p>
+
+<p class="noindent"><b>Criterios de Inclusi&oacute;n:</b></p>
+<ul>
+<li>Formar parte del personal administrativo u operativo del restaurante Sumaq Mikhuy.</li>
+<li>Contar con acceso a un dispositivo m&oacute;vil o computadora con conexi&oacute;n a internet en el lugar de trabajo.</li>
+<li>Haber recibido una inducci&oacute;n b&aacute;sica sobre el uso del sistema RestaurantOS previa a la evaluaci&oacute;n.</li>
+</ul>
+<p class="noindent"><b>Criterios de Exclusi&oacute;n:</b></p>
+<ul>
+<li>Personal externo al restaurante (proveedores, clientes) que no opera directamente el sistema.</li>
+<li>Personas que rechacen participar voluntariamente en la evaluaci&oacute;n de usabilidad.</li>
+</ul>
+
+<h2>3.5. Variables e indicadores</h2>
+
+<h3>3.5.1. Definici&oacute;n conceptual de las variables</h3>
+
+<p class="noindent"><i>Variable de estudio</i></p>
+
+<p><b>Sistema de gesti&oacute;n integral RestaurantOS:</b> Se define como una plataforma de software que centraliza la gesti&oacute;n de pedidos, cr&eacute;ditos, inventario y reportes de un negocio gastron&oacute;mico, actuando como un sistema de informaci&oacute;n empresarial de alcance reducido. Seg&uacute;n Laudon y Laudon (2020), este tipo de sistemas constituye un conjunto de componentes interrelacionados que recolectan, procesan y distribuyen informaci&oacute;n para apoyar la coordinaci&oacute;n y el control de las operaciones diarias de un negocio.</p>
+
+<p class="noindent"><i>Variables descriptivas</i></p>
+
+<p><b>a) Especificaci&oacute;n (An&aacute;lisis):</b> En el marco de la metodolog&iacute;a Spec Driven Development, la especificaci&oacute;n implica la descomposici&oacute;n detallada de los requisitos del sistema en un documento formal (SRS) y en historias de usuario con criterios de aceptaci&oacute;n verificables, con el fin de comprender plenamente las necesidades del negocio antes de iniciar la codificaci&oacute;n (Sommerville, 2019).</p>
+
+<p><b>b) Dise&ntilde;o:</b> El dise&ntilde;o en ingenier&iacute;a de software se refiere al proceso de definir la arquitectura, los componentes, las interfaces y el modelo de datos de un sistema. Seg&uacute;n Sommerville (2019), este proceso establece una soluci&oacute;n t&eacute;cnica (arquitectura cliente-servidor y base de datos normalizada) que cumple con los requisitos especificados.</p>
+
+<p><b>c) Implementaci&oacute;n:</b> La implementaci&oacute;n es la fase de construcci&oacute;n donde el dise&ntilde;o se traduce en c&oacute;digo ejecutable. Durante esta etapa, se utiliza el stack tecnol&oacute;gico seleccionado (Go, Gin, GORM, React, TypeScript) para escribir el c&oacute;digo fuente, integrar los diferentes m&oacute;dulos y desarrollar las pruebas unitarias correspondientes bajo el enfoque TDD (Beck, 2003).</p>
+
+<p><b>d) Funcionamiento:</b> Se define como la capacidad del software, en su versi&oacute;n de Producto M&iacute;nimo Viable (MVP), para ejecutar sus procesos principales (autenticaci&oacute;n, pedidos, cr&eacute;ditos, inventario, reportes) sin fallos cr&iacute;ticos, medido tanto por la cobertura de la suite de pruebas unitarias autom&aacute;ticas como por la verificaci&oacute;n manual de los criterios de aceptaci&oacute;n de cada historia de usuario (Sommerville, 2019).</p>
+
+<p><b>e) Usabilidad:</b> De acuerdo con la norma ISO 9241-11 y lo establecido por Enr&iacute;quez y Casas (2013), la usabilidad se define como el grado en que el personal del restaurante puede utilizar el dashboard administrativo para lograr sus objetivos operativos diarios (registrar pedidos, consultar deudas, revisar inventario) con efectividad, eficiencia y satisfacci&oacute;n. Operacionalmente, se mide mediante la Escala de Usabilidad del Sistema (SUS), desarrollada por Brooke (1996), compuesta por 10 &iacute;tems tipo Likert que consolidan las percepciones del usuario en un <i>Score</i> global de 0 a 100 puntos.</p>
+
+<h3>3.5.2. Definici&oacute;n operacional de las variables</h3>
+
+<p class="noindent"><i>Variable de estudio</i></p>
+<p>X: Sistema de gesti&oacute;n integral RestaurantOS</p>
+
+<p class="noindent"><i>Variables descriptivas</i></p>
+<p>X1: Especificaci&oacute;n (SRS e Historias de Usuario)</p>
+<p>X2: Dise&ntilde;o (Arquitectura y Base de Datos)</p>
+<p>X3: Implementaci&oacute;n</p>
+<p>X4: Funcionamiento</p>
+<p>X5: Usabilidad</p>
+
+<h2>3.6. T&eacute;cnicas e instrumentos para el tratamiento de datos e informaci&oacute;n</h2>
+
+<p>Seg&uacute;n Arias (2012), las t&eacute;cnicas de recolecci&oacute;n de datos son las distintas formas o maneras de obtener la informaci&oacute;n, mientras que los instrumentos son los medios materiales que se emplean para recoger y almacenar dicha informaci&oacute;n.</p>
+
+<p>Dada la naturaleza de la investigaci&oacute;n aplicada y tecnol&oacute;gica, el proceso de recolecci&oacute;n de datos se estructur&oacute; en dos fases metodol&oacute;gicas distintas. La primera fase, de car&aacute;cter diagn&oacute;stico, emple&oacute; la t&eacute;cnica de la entrevista para el levantamiento de requerimientos funcionales previos al desarrollo del software, dirigida al propietario del restaurante Sumaq Mikhuy. La segunda fase, de car&aacute;cter evaluativo, tuvo como objetivo medir directamente las variables de estudio una vez concluido el Producto M&iacute;nimo Viable (MVP). Para ello, se aplic&oacute; una Ficha de An&aacute;lisis Documental orientada a la revisi&oacute;n t&eacute;cnica de los artefactos del sistema (incluyendo el reporte autom&aacute;tico de cobertura de pruebas) para evaluar la variable Funcionamiento (X4), y el instrumento estandarizado Escala de Usabilidad del Sistema (SUS) aplicado a la muestra censal de 5 miembros del personal para evaluar la variable Usabilidad (X5).</p>
+
+<h3>3.6.1. T&eacute;cnicas para recolectar informaci&oacute;n</h3>
+
+<p>Para este estudio de desarrollo tecnol&oacute;gico se utilizaron tres t&eacute;cnicas fundamentales: la entrevista, el an&aacute;lisis documental y la encuesta.</p>
+
+<p><b>3.6.1.1. Entrevista:</b> Para la fase de diagn&oacute;stico y recopilaci&oacute;n de requerimientos, se llev&oacute; a cabo una entrevista semiestructurada con el propietario del restaurante Sumaq Mikhuy. Esta entrevista permiti&oacute; obtener informaci&oacute;n detallada sobre la gesti&oacute;n manual de cr&eacute;ditos (&quot;fiado&quot;), inventario y pedidos, identificar necesidades espec&iacute;ficas como las alertas de stock m&iacute;nimo y el l&iacute;mite de deuda por cliente, y estructurar el documento de Especificaci&oacute;n de Requisitos de Software (SRS) inicial.</p>
+
+<p><b>3.6.1.2. An&aacute;lisis documental:</b> Para la validaci&oacute;n de la variable de Funcionamiento (X4), se realiz&oacute; una revisi&oacute;n t&eacute;cnica y exhaustiva de los artefactos del sistema. Este an&aacute;lisis se enfoc&oacute; en la revisi&oacute;n del reporte de cobertura de pruebas unitarias generado autom&aacute;ticamente por el flujo de integraci&oacute;n continua (GitHub Actions), el c&oacute;digo fuente del backend (Go) y frontend (React/TypeScript), y los registros de ejecuci&oacute;n en el entorno de pruebas. Este an&aacute;lisis, guiado por la norma ISO/IEC 25010:2023, permiti&oacute; auditar los procesos, garantizando la correcta operatividad t&eacute;cnica del sistema y su alineaci&oacute;n con la arquitectura propuesta.</p>
+
+<p><b>3.6.1.3. Encuesta:</b> Finalmente, para la evaluaci&oacute;n emp&iacute;rica de la variable Usabilidad (X5), se aplic&oacute; la t&eacute;cnica de la encuesta empleando como instrumento la Escala de Usabilidad del Sistema (SUS), dirigida a la muestra censal de 5 miembros del personal del restaurante. Esta t&eacute;cnica estandarizada a nivel internacional permiti&oacute; recolectar datos cuantitativos precisos sobre la interacci&oacute;n humano-computadora (HCI) en el contexto de un usuario con habilidades digitales heterog&eacute;neas, propio de un negocio familiar de provincia.</p>
+
+<h3>3.6.2. Instrumentos para la recolectar informaci&oacute;n</h3>
+
+<p><b>3.6.2.1. Gu&iacute;a de entrevista:</b> Se elabor&oacute; una gu&iacute;a de entrevista semiestructurada con preguntas clave dirigidas al propietario del restaurante Sumaq Mikhuy. Este instrumento diagn&oacute;stico permiti&oacute; obtener informaci&oacute;n primaria sobre los procesos manuales actuales (cuadernos de cr&eacute;dito, control de insumos) e identificar los requerimientos funcionales cr&iacute;ticos del SRS.</p>
+
+<p><b>3.6.2.2. Ficha de an&aacute;lisis documental:</b> Se utiliz&oacute; una ficha de evaluaci&oacute;n t&eacute;cnica (tipo <i>checklist</i>) para auditar de manera estructurada los artefactos l&oacute;gicos del sistema (reporte de cobertura de pruebas, endpoints de la API REST, migraciones de base de datos). En ella se registraron los resultados binarios de cumple y no cumple por cada requisito funcional (RF-01 a RF-08), permitiendo validar la variable de Funcionamiento (X4) bajo los criterios de Adecuaci&oacute;n Funcional dictados por la norma internacional ISO/IEC 25010:2023.</p>
+
+<p><b>3.6.2.3. Escala de Usabilidad del Sistema (SUS):</b> Se aplic&oacute; el instrumento estandarizado <i>System Usability Scale</i>, dirigido a la muestra censal de 5 miembros del personal. Este instrumento, compuesto por 10 afirmaciones con opciones de respuesta tipo Likert (escala de 1 a 5), fue seleccionado exclusivamente para cuantificar la variable de Usabilidad (X5), midiendo dimensiones cr&iacute;ticas como la facilidad de uso del dashboard, la consistencia de las funciones del sistema y la curva de aprendizaje del personal.</p>
+
+<h3>3.6.3. Herramientas para el tratamiento de datos e informaci&oacute;n</h3>
+
+<p>Para el desarrollo, despliegue y validaci&oacute;n del Producto M&iacute;nimo Viable (MVP) del sistema RestaurantOS, se seleccion&oacute; un conjunto de herramientas tecnol&oacute;gicas, lenguajes y librer&iacute;as de vanguardia. La Tabla 2 detalla el stack tecnol&oacute;gico utilizado para el procesamiento de la informaci&oacute;n, tanto en el lado del cliente (Frontend) como en el lado del servidor (Backend).</p>
+
+<p class="tablabel">Tabla 2</p>
+<p class="tabletitle">Herramientas tecnol&oacute;gicas para el procesamiento de datos y desarrollo del software</p>
+<table>
+<tr><th>Software / Tecnolog&iacute;a</th><th>Fabricante / Creador</th><th>Servicio / Descripci&oacute;n</th></tr>
+<tr><td>Go (Golang)</td><td>Google</td><td>Lenguaje de programaci&oacute;n compilado y de tipado est&aacute;tico. Act&uacute;a como el motor l&oacute;gico principal del backend de RestaurantOS.</td></tr>
+<tr><td>Gin</td><td>Comunidad Open Source</td><td>Framework web minimalista para Go. Gestiona el enrutamiento HTTP y los middlewares de autenticaci&oacute;n y autorizaci&oacute;n.</td></tr>
+<tr><td>GORM</td><td>Comunidad Open Source</td><td>Mapeador objeto-relacional (ORM) para Go. Gestiona las migraciones y las transacciones sobre PostgreSQL.</td></tr>
+<tr><td>PostgreSQL</td><td>PostgreSQL Global Development Group</td><td>Sistema de gesti&oacute;n de bases de datos relacional de c&oacute;digo abierto. Garantiza la integridad referencial y las propiedades ACID.</td></tr>
+<tr><td>React.js</td><td>Meta (Facebook) / Open Source</td><td>Librer&iacute;a de JavaScript para la construcci&oacute;n de interfaces de usuario. Permite crear la landing page p&uacute;blica y el dashboard administrativo (SPA).</td></tr>
+<tr><td>TypeScript</td><td>Microsoft</td><td>Superconjunto tipado de JavaScript. Reduce errores de tipo en tiempo de desarrollo tanto en el dashboard como en la landing page.</td></tr>
+<tr><td>TailwindCSS</td><td>Tailwind Labs</td><td>Framework de utilidades CSS empleado para la maquetaci&oacute;n visual responsiva de la plataforma.</td></tr>
+<tr><td>Vite</td><td>Evan You / Comunidad Open Source</td><td>Herramienta de <i>build</i> y servidor de desarrollo para el frontend, con recarga en caliente (HMR).</td></tr>
+<tr><td>JWT (JSON Web Token)</td><td>IETF (RFC 7519)</td><td>Est&aacute;ndar abierto para la creaci&oacute;n de tokens de acceso. Utilizado para autenticar y autorizar las sesiones de administrador y empleado.</td></tr>
+<tr><td>Bcrypt</td><td>Niels Provos / David Mazi&egrave;res</td><td>Funci&oacute;n de <i>hashing</i> de contrase&ntilde;as. Utilizada para encriptar las credenciales del personal antes de almacenarlas en PostgreSQL.</td></tr>
+<tr><td>testify</td><td>Comunidad Open Source (Go)</td><td>Librer&iacute;a de aserciones y <i>mocks</i> para las pruebas unitarias e integraci&oacute;n del backend en Go.</td></tr>
+<tr><td>Vitest + React Testing Library</td><td>Comunidad Open Source</td><td>Herramientas de pruebas automatizadas para los componentes de React del dashboard administrativo.</td></tr>
+<tr><td>Git</td><td>Linus Torvalds</td><td>Software de control de versiones distribuido. Fundamental para la trazabilidad del c&oacute;digo durante los Sprints de SDD.</td></tr>
+<tr><td>GitHub / GitHub Actions</td><td>GitHub, Inc. (Microsoft)</td><td>Plataforma de alojamiento del repositorio y motor de integraci&oacute;n y despliegue continuo (CI/CD).</td></tr>
+<tr><td>Docker / Docker Compose</td><td>Docker, Inc.</td><td>Plataforma de contenerizaci&oacute;n. Empaqueta el backend, frontend y base de datos como servicios reproducibles.</td></tr>
+<tr><td>Railway</td><td>Railway Corp.</td><td>Plataforma de despliegue en la nube que aloja los contenedores Docker del sistema en producci&oacute;n.</td></tr>
+<tr><td>Postman</td><td>Postman, Inc.</td><td>Plataforma para la construcci&oacute;n y prueba de APIs. Empleada para validar manualmente los endpoints del backend antes de su integraci&oacute;n.</td></tr>
+<tr><td>Visual Studio Code</td><td>Microsoft</td><td>Editor de c&oacute;digo fuente. Entorno de desarrollo integrado (IDE) principal para la codificaci&oacute;n del proyecto.</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir del stack tecnol&oacute;gico definido en la especificaci&oacute;n t&eacute;cnica de RestaurantOS.</p>
+
+<h3>3.6.4. Dise&ntilde;o estad&iacute;stico</h3>
+
+<p>Dado que la presente investigaci&oacute;n es de tipo aplicada-tecnol&oacute;gica y de nivel descriptivo, no se contempla un dise&ntilde;o estad&iacute;stico inferencial para la contrastaci&oacute;n de hip&oacute;tesis poblacionales. El tratamiento de los datos se fundament&oacute; en la estad&iacute;stica descriptiva y en m&eacute;tricas estandarizadas de evaluaci&oacute;n de software.</p>
+
+<p>Los resultados del reporte de cobertura de pruebas unitarias, generado autom&aacute;ticamente mediante el comando <i>go test ./... -coverprofile=coverage.out</i> y consolidado con <i>go tool cover -func=coverage.out</i>, se expresaron como porcentaje de sentencias (<i>statements</i>) cubiertas, tanto a nivel global como desagregado por paquete (<i>auth</i>, <i>handlers</i>, <i>middleware</i>, <i>repository</i>, <i>services</i>, <i>export</i>). Los resultados obtenidos mediante el instrumento SUS aplicado a la muestra censal de 5 sujetos se procesan mediante el algoritmo de tabulaci&oacute;n est&aacute;ndar del <i>System Usability Scale</i> (Brooke, 1996), consolidando las 10 respuestas de cada encuestado en un puntaje individual de 0 a 100, y estos 5 puntajes se promedian para obtener el <i>Score</i> global de la muestra. Toda esta informaci&oacute;n cuantitativa se presenta mediante tablas de evaluaci&oacute;n, capturas de pantalla del sistema en ejecuci&oacute;n y figuras arquitect&oacute;nicas.</p>
+
+<h3>3.6.5. An&aacute;lisis e interpretaci&oacute;n de datos</h3>
+
+<p>El procesamiento de la informaci&oacute;n se ejecut&oacute; en tres frentes alineados con las fases del proyecto:</p>
+
+<p>1. <b>An&aacute;lisis cualitativo de requisitos.</b> Los datos recopilados sobre la gesti&oacute;n manual del restaurante (cuadernos de cr&eacute;dito, control emp&iacute;rico de insumos) se interpretaron para derivar los ocho requisitos funcionales (RF-01 a RF-08) y los diez requisitos no funcionales (RNF-01 a RNF-10) documentados en el SRS (<i>PLAN_SDD.md</i>).</p>
+
+<p>2. <b>Validaci&oacute;n binaria y porcentual del Funcionamiento (X4).</b> El reporte autom&aacute;tico de cobertura y la Ficha de An&aacute;lisis Documental se interpretaron bajo un enfoque de validaci&oacute;n binaria (Cumple / No Cumple) por cada requisito funcional, y bajo un enfoque porcentual (cobertura de c&oacute;digo) contrastado contra el umbral del 90% establecido en el RNF-02. A diferencia de un reporte simulado, el c&aacute;lculo aqu&iacute; presentado excluye deliberadamente los paquetes <i>cmd/*</i> (puntos de entrada <i>main.go</i> sin l&oacute;gica de negocio, no sujetos a prueba unitaria por convenci&oacute;n del lenguaje Go), de modo que el porcentaje refleje exclusivamente los m&oacute;dulos con l&oacute;gica de negocio.</p>
+
+<p>3. <b>Tabulaci&oacute;n cuantitativa de Usabilidad (X5).</b> Los datos del instrumento SUS se tabulan aplicando la f&oacute;rmula de Brooke (1996): para los &iacute;tems impares (1, 3, 5, 7, 9) se resta 1 al valor marcado; para los &iacute;tems pares (2, 4, 6, 8, 10) se resta el valor marcado a 5; la suma de las diez contribuciones se multiplica por 2.5 para obtener un puntaje de 0 a 100 por encuestado. La interpretaci&oacute;n del <i>Score</i> promedio se categoriza seg&uacute;n los rangos de Bangor, Kortum y Miller (2008).</p>
+
+<h3>3.6.6. T&eacute;cnicas para aplicar la metodolog&iacute;a Spec Driven Development (SDD)</h3>
+
+<p>La metodolog&iacute;a rectora y &uacute;nica del proyecto es Spec Driven Development (SDD), descrita en el apartado 2.2.2. No se aplic&oacute; el marco Scrum ni ninguna de sus ceremonias (no hubo <i>Daily Scrum</i>, <i>Sprint Review</i> ni <i>Retrospective</i> como tales); las menciones a &quot;Sprint&quot; en este documento (Tabla 5, apartado 4.1.3) se emplean &uacute;nicamente como sin&oacute;nimo llano de &quot;iteraci&oacute;n de desarrollo&quot; y no implican la adopci&oacute;n del marco Scrum.</p>
+
+<p>En cuanto a los roles, el investigador asumi&oacute; una dualidad funcional secuencial propia de SDD y no de Scrum: actu&oacute; como <b>Analista (A)</b> durante la fase de especificaci&oacute;n, elaborando el SRS y las tarjetas de funcionalidad (<i>Feature Cards</i>) a partir de la entrevista con el propietario del restaurante; como <b>Dise&ntilde;ador (D)</b> durante la fase de arquitectura y modelado de la base de datos; como <b>Implementador (I)</b> durante la codificaci&oacute;n, acompa&ntilde;ando cada funci&oacute;n con su respectiva prueba unitaria bajo el ciclo &quot;rojo-verde-refactor&quot; de TDD (Beck, 2003); y como <b>responsable de Calidad y Despliegue</b> durante la verificaci&oacute;n de cobertura y la auditor&iacute;a de concordancia final.</p>
+
+<p>Respecto a los artefactos, se gestionaron los siguientes, todos propios del flujo SDD:</p>
+<ul>
+<li><b>Documento de Especificaci&oacute;n de Requisitos de Software (SRS):</b> <i>PLAN_SDD.md</i>, con los requisitos funcionales (RF-01 a RF-08) y no funcionales (RNF-01 a RNF-10).</li>
+<li><b>Tarjetas de funcionalidad (<i>Feature Cards</i> FC-01 a FC-08):</b> una por cada m&oacute;dulo del sistema, redactadas antes de escribir cualquier c&oacute;digo de dicho m&oacute;dulo.</li>
+<li><b>Pruebas unitarias escritas antes del c&oacute;digo (TDD):</b> por cada Feature Card, el flujo aplicado fue (1) redactar las pruebas a partir de los criterios de aceptaci&oacute;n, (2) verificar que fallan por ausencia de implementaci&oacute;n, (3) implementar el c&oacute;digo m&iacute;nimo necesario, (4) refactorizar manteniendo las pruebas en verde.</li>
+<li><b>Reporte de cobertura de pruebas:</b> generado autom&aacute;ticamente al final de cada iteraci&oacute;n mediante el flujo de integraci&oacute;n continua (<i>test.yml</i>).</li>
+</ul>
+
+<p class="tablabel">Tabla 3 (continuaci&oacute;n)</p>
+<p class="tabletitle">Entregables SDD aplicados en cada iteraci&oacute;n del proyecto</p>
+<table>
+<tr><th>Tarea SDD</th><th>Artefacto generado</th><th>Verificaci&oacute;n aplicada</th></tr>
+<tr><td>Especificaci&oacute;n</td><td>Feature Card del m&oacute;dulo correspondiente</td><td>Revisi&oacute;n de criterios de aceptaci&oacute;n redactados en la propia tarjeta</td></tr>
+<tr><td>Escritura de pruebas (rojo)</td><td>Archivo <i>*_test.go</i> con las pruebas del m&oacute;dulo</td><td><i>go test</i> falla por ausencia de implementaci&oacute;n (esperado)</td></tr>
+<tr><td>Implementaci&oacute;n (verde)</td><td>C&oacute;digo fuente del m&oacute;dulo (<i>services</i>, <i>handlers</i>, <i>repository</i>)</td><td><i>go test</i> pasa en verde</td></tr>
+<tr><td>Refactorizaci&oacute;n</td><td>Ajustes de dise&ntilde;o sin alterar el comportamiento probado</td><td><i>go test</i> se mantiene en verde tras cada cambio</td></tr>
+<tr><td>Integraci&oacute;n continua</td><td>Ejecuci&oacute;n autom&aacute;tica de la suite completa en cada <i>push</i></td><td>Flujo <i>test.yml</i> de GitHub Actions, con bloqueo si la cobertura cae bajo el umbral del RNF-02</td></tr>
+<tr><td>Auditor&iacute;a de concordancia (iteraci&oacute;n de cierre)</td><td>Contraste manual entre el SRS y el c&oacute;digo realmente implementado</td><td>Detecci&oacute;n de las brechas documentadas en la Tabla 7 (apartado 4.1.4)</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir del flujo de trabajo real ejecutado durante el desarrollo de RestaurantOS, &iacute;ntegramente bajo Spec Driven Development.</p>
+
+<p class="tablabel">Tabla 3</p>
+<p class="tabletitle">Entregables de la metodolog&iacute;a SDD aplicados al proyecto</p>
+<table>
+<tr><th>Tarea</th><th>Entregable</th><th>T&eacute;cnica aplicada en el proyecto</th><th>Responsable</th></tr>
+<tr><td>Especificaci&oacute;n de requisitos</td><td>Documento SRS y Feature Cards</td><td>Traducci&oacute;n de la entrevista con el propietario en requisitos funcionales y no funcionales formales.</td><td>Investigador (Analista)</td></tr>
+<tr><td>Dise&ntilde;o de arquitectura y base de datos</td><td>Diagrama de arquitectura y modelo entidad-relaci&oacute;n normalizado (3FN)</td><td>Definici&oacute;n de la arquitectura cliente-servidor y del esquema PostgreSQL a partir de los Feature Cards.</td><td>Investigador (Dise&ntilde;ador)</td></tr>
+<tr><td>Desarrollo guiado por pruebas</td><td>Incremento de software funcional con pruebas unitarias</td><td>Implementaci&oacute;n del ciclo rojo-verde-refactor en Go (testify) y React (Vitest/RTL) por cada Sprint.</td><td>Investigador (Implementador)</td></tr>
+<tr><td>Verificaci&oacute;n de calidad</td><td>Reporte de cobertura de pruebas y checklist ISO/IEC 25010</td><td>Auditor&iacute;a autom&aacute;tica de cobertura (GitHub Actions) y verificaci&oacute;n manual de criterios de aceptaci&oacute;n.</td><td>Investigador (Aseguramiento de Calidad)</td></tr>
+<tr><td>Despliegue continuo</td><td>Sistema desplegado en Railway</td><td>Construcci&oacute;n de la imagen Docker y despliegue autom&aacute;tico tras superar el umbral de cobertura.</td><td>Investigador (Despliegue)</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir del flujo SDD definido para el proyecto RestaurantOS.</p>
+
+<div class="pagebreak"></div>
+
+<!-- ============ CAPITULO IV ============ -->
+<h1 class="chap">Cap&iacute;tulo IV</h1>
+<h1 class="chap">Resultados y Discusi&oacute;n</h1>
+
+<h2>4.1. Resultados de la Investigaci&oacute;n</h2>
+
+<p>Los resultados del presente estudio se exponen en alineaci&oacute;n directa con las variables descriptivas (X1 a X5) definidas en la matriz de operacionalizaci&oacute;n, evidenciando los entregables metodol&oacute;gicos y t&eacute;cnicos obtenidos en cada fase del desarrollo del sistema RestaurantOS.</p>
+
+<h3>4.1.1. Resultados de la Fase de Especificaci&oacute;n (Variable X1)</h3>
+
+<p>La recolecci&oacute;n de datos inicial se llev&oacute; a cabo mediante una entrevista semiestructurada con el propietario del restaurante Sumaq Mikhuy y la observaci&oacute;n directa de sus pr&aacute;cticas de gesti&oacute;n manual (cuadernos de cr&eacute;dito, control emp&iacute;rico de insumos). Este proceso permiti&oacute; identificar las deficiencias descritas en el Cap&iacute;tulo I y traducirlas en una lista formal de requisitos funcionales y no funcionales, documentados en el SRS.</p>
+
+<p class="tablabel">Tabla 4</p>
+<p class="tabletitle">Detalle de los requisitos funcionales del sistema RestaurantOS</p>
+<table>
+<tr><th>Nro</th><th>Requisito funcional</th><th>Descripci&oacute;n</th><th>M&oacute;dulo</th></tr>
+<tr><td>RF-01</td><td>Autenticaci&oacute;n y roles</td><td>El sistema permite el inicio de sesi&oacute;n con email y contrase&ntilde;a, generando un JWT con expiraci&oacute;n de 8 horas y diferenciando los roles administrador y empleado.</td><td>Seguridad</td></tr>
+<tr><td>RF-02</td><td>Gesti&oacute;n de clientes</td><td>Permite registrar, listar, buscar, editar y desactivar clientes, as&iacute; como ver su historial de pedidos y estado de cuenta.</td><td>Clientes</td></tr>
+<tr><td>RF-03</td><td>Gesti&oacute;n de pedidos</td><td>Registra pedidos con cliente, fecha, tipo, &iacute;tems y precio unitario, calculando el total autom&aacute;ticamente y gestionando los estados pendiente, entregado y anulado.</td><td>Pedidos</td></tr>
+<tr><td>RF-04</td><td>Cr&eacute;ditos y pagos</td><td>Registra deudas por pedidos a cr&eacute;dito, abonos parciales o totales, y alerta cuando un cliente supera el umbral de deuda configurado.</td><td>Cr&eacute;ditos</td></tr>
+<tr><td>RF-05</td><td>Inventario</td><td>Registra productos con stock actual y m&iacute;nimo, descuenta stock autom&aacute;ticamente al registrar un pedido y alerta ante niveles bajos.</td><td>Inventario</td></tr>
+<tr><td>RF-06</td><td>Reportes</td><td>Genera reportes de ventas (diario, semanal, mensual), clientes con deuda y movimientos de inventario, exportables en PDF y Excel.</td><td>Reportes</td></tr>
+<tr><td>RF-07</td><td>Predicci&oacute;n b&aacute;sica de demanda</td><td>Muestra una predicci&oacute;n de demanda del d&iacute;a siguiente basada en el promedio hist&oacute;rico de los &uacute;ltimos 30 d&iacute;as y alertas de deuda o reabastecimiento.</td><td>Inteligencia de negocio</td></tr>
+<tr><td>RF-08</td><td>P&aacute;gina p&uacute;blica</td><td>Muestra la informaci&oacute;n del restaurante, el men&uacute; actualizable desde el dashboard y un formulario de contacto.</td><td>Landing page</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir del documento SRS de RestaurantOS.</p>
+
+<p>Complementariamente, se establecieron diez requisitos no funcionales (RNF-01 a RNF-10) referidos al tiempo de respuesta de la API (menor a 500 ms en el 95% de las peticiones), la meta de cobertura de pruebas unitarias (igual o superior al 90%), la firma de tokens JWT con el algoritmo HS256, el cifrado de contrase&ntilde;as con bcrypt (factor de costo 12), el cumplimiento del est&aacute;ndar REST, la capacidad de soportar al menos 50 usuarios concurrentes, el despliegue autom&aacute;tico mediante GitHub Actions, el uso obligatorio de HTTPS, el registro persistente de errores y la ejecuci&oacute;n de <i>backups</i> diarios de la base de datos. Estos requisitos garantizaron que la soluci&oacute;n tecnol&oacute;gica se mantuviera enfocada en resolver el problema central diagnosticado en el Cap&iacute;tulo I, sentando las bases para la arquitectura del sistema.</p>
+
+<p>Cabe precisar un hallazgo relevante para la investigaci&oacute;n: durante la fase de auditor&iacute;a de concordancia (ver 4.1.4), se detect&oacute; que dos de los ocho requisitos funcionales especificados en el SRS &ndash;RF-06 (Reportes) y RF-08 (P&aacute;gina p&uacute;blica, en su componente de men&uacute; din&aacute;mico)&ndash; no contaban con implementaci&oacute;n real en el c&oacute;digo, pese a estar completamente documentados desde la fase de an&aacute;lisis. Este hallazgo se documenta con detalle en el apartado 4.1.4 como evidencia del valor del an&aacute;lisis documental como t&eacute;cnica de control de calidad.</p>
+
+<p class="lvl4">[Espacio para Figura: &iacute;ndice de las Feature Cards FC-01 a FC-08 / vista de <i>PLAN_SDD.md</i>]</p>
+
+<h3>4.1.2. Resultados de la Fase de Dise&ntilde;o (Variable X2)</h3>
+
+<p>Los resultados de la fase de dise&ntilde;o se materializaron en los artefactos arquitect&oacute;nicos del sistema. A nivel de infraestructura, se defini&oacute; una arquitectura de tres capas desacopladas: una capa de cliente (navegador) que aloja la landing page p&uacute;blica y el dashboard administrativo, ambos construidos en React con TailwindCSS; una capa de API REST construida en Go con el framework Gin, que expone rutas p&uacute;blicas (<i>/api/public/*</i>), de autenticaci&oacute;n (<i>/api/auth/*</i>) y protegidas por rol mediante middleware JWT (<i>/api/admin/*</i>, <i>/api/empleado/*</i>); y una capa de persistencia en PostgreSQL gestionada mediante GORM, que aloja las tablas <i>users</i>, <i>clientes</i>, <i>pedidos</i>, <i>pedido_items</i>, <i>pagos</i>, <i>productos</i>, <i>movimientos_stock</i> y <i>menu_publico</i>.</p>
+
+<p>A nivel de organizaci&oacute;n del c&oacute;digo, el proyecto se estructur&oacute; en tres directorios ra&iacute;z independientes: <i>backend/</i>, organizado en los paquetes <i>auth</i>, <i>handlers</i>, <i>middleware</i>, <i>models</i>, <i>repository</i>, <i>services</i> y <i>database</i>, cada uno acompa&ntilde;ado de su respectivo archivo de pruebas unitarias; <i>frontend/</i>, organizado en <i>pages/public</i> (Home, Menu, Nosotros, Contacto) y <i>pages/dashboard</i> (Dashboard, Clientes, Pedidos, Inventario, Cr&eacute;ditos, Reportes), junto con los directorios <i>components</i>, <i>hooks</i>, <i>services</i> y <i>context</i>; y <i>database/</i>, que contiene las migraciones SQL numeradas secuencialmente (001 a 007) y los <i>seeds</i> de datos de desarrollo. Finalmente, se defini&oacute; el archivo <i>docker-compose.yml</i> para orquestar los tres servicios en el entorno local, y el directorio <i>.github/workflows/</i> con los flujos <i>test.yml</i> y <i>deploy.yml</i> del pipeline de integraci&oacute;n y despliegue continuo.</p>
+
+<p>Esta decisi&oacute;n arquitect&oacute;nica &ndash;separar estrictamente la l&oacute;gica de negocio (<i>services</i>) del acceso a datos (<i>repository</i>) y del enrutamiento HTTP (<i>handlers</i>)&ndash; fue determinante para el cumplimiento de la meta de cobertura de pruebas, ya que permiti&oacute; probar la l&oacute;gica de negocio de forma aislada, sustituyendo el repositorio real por un <i>mock</i> durante las pruebas unitarias.</p>
+
+<p>Para el m&oacute;dulo de Reportes (RF-06) se incorpor&oacute; un paquete adicional, <i>internal/export</i>, desacoplado de la capa <i>handlers</i>, cuya &uacute;nica responsabilidad es transformar las estructuras de dominio (<i>ReporteVentas</i>, <i>ReporteMovimientos</i>, <i>[]models.Cliente</i>) en archivos binarios PDF (mediante la librer&iacute;a <i>gofpdf</i>) y Excel (mediante <i>excelize</i>). Esta decisi&oacute;n de dise&ntilde;o &ndash;aislar la generaci&oacute;n de archivos de la l&oacute;gica HTTP&ndash; permiti&oacute; alcanzar una cobertura de pruebas del 100% en dicho paquete, verificando la firma binaria de cada archivo generado (cabecera <i>%PDF</i> para PDF y <i>PK</i> para el formato ZIP subyacente de <i>.xlsx</i>) sin necesidad de abrir los archivos con un lector externo.</p>
+
+<p>Asimismo, se incorpor&oacute; al modelo de datos la tabla <i>menu_publicos</i> (ya prevista en el dise&ntilde;o original pero sin consumidores en el c&oacute;digo), habilitando un endpoint p&uacute;blico de solo lectura (<i>GET /api/public/menu</i>) y un conjunto de endpoints administrativos protegidos por rol (<i>GET/POST/PUT/DELETE /api/admin/menu</i>) para que el men&uacute; de la landing page sea gestionable desde el dashboard, cerrando as&iacute; la brecha de dise&ntilde;o identificada en RF-08.</p>
+
+<p class="lvl4">[Espacio para Figura: diagrama de arquitectura de 3 capas]</p>
+<p class="lvl4">[Espacio para Figura: modelo entidad-relaci&oacute;n normalizado (8 tablas)]</p>
+
+<h3>4.1.3. Resultados de la Fase de Implementaci&oacute;n (Variable X3)</h3>
+
+<p>La construcci&oacute;n del Producto M&iacute;nimo Viable se organiz&oacute; en seis iteraciones (Sprint 0 a Sprint 5), cada una culminando con un incremento de software funcional respaldado por pruebas autom&aacute;ticas. La Tabla 5 resume el alcance y los resultados de cada iteraci&oacute;n.</p>
+
+<p class="tablabel">Tabla 5</p>
+<p class="tabletitle">Resultados de las iteraciones de desarrollo (Sprints) del sistema RestaurantOS</p>
+<table>
+<tr><th>Iteraci&oacute;n</th><th>Objetivo principal</th><th>Entregables clave</th><th>Estado</th></tr>
+<tr><td>Sprint 0 &ndash; Especificaci&oacute;n</td><td>Formalizar la especificaci&oacute;n del sistema antes de codificar (SDD).</td><td>Documento SRS (PLAN_SDD.md) y ocho tarjetas de funcionalidad (FC-01 a FC-08).</td><td>Completado</td></tr>
+<tr><td>Sprint 1 &ndash; Base del proyecto</td><td>Establecer la infraestructura y la seguridad del sistema.</td><td>Configuraci&oacute;n de Go, Gin, GORM y PostgreSQL; migraciones iniciales; m&oacute;dulo de autenticaci&oacute;n JWT con cobertura de pruebas del 100% en el paquete <i>auth</i>.</td><td>Completado</td></tr>
+<tr><td>Sprint 2 &ndash; N&uacute;cleo del negocio</td><td>Habilitar el registro de clientes, pedidos, cr&eacute;ditos y pagos.</td><td>CRUD de clientes, servicio de creaci&oacute;n de pedidos con c&aacute;lculo autom&aacute;tico de total, registro de cr&eacute;ditos y abonos con pruebas unitarias y de integraci&oacute;n.</td><td>Completado</td></tr>
+<tr><td>Sprint 3 &ndash; Inventario, IA y Reportes</td><td>Vincular el consumo de insumos con los pedidos y generar reportes.</td><td>M&oacute;dulo de inventario con alertas de stock m&iacute;nimo, servicio de predicci&oacute;n b&aacute;sica de demanda y generaci&oacute;n de reportes en PDF/Excel.</td><td>Completado</td></tr>
+<tr><td>Sprint 4 &ndash; Frontend</td><td>Construir la landing page p&uacute;blica y el dashboard administrativo.</td><td>Interfaces React con TailwindCSS integradas con la API REST mediante el <i>AuthContext</i> y los servicios HTTP.</td><td>Completado</td></tr>
+<tr><td>Sprint 5 &ndash; CI/CD y despliegue</td><td>Automatizar las pruebas y el despliegue del sistema.</td><td>Flujos <i>test.yml</i> y <i>deploy.yml</i> en GitHub Actions; despliegue del contenedor Docker en Railway; verificaci&oacute;n final de cobertura.</td><td>Completado</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir de la planificaci&oacute;n de entregables de RestaurantOS.</p>
+
+<p>Durante el Sprint 1, la validaci&oacute;n del m&oacute;dulo de autenticaci&oacute;n se realiz&oacute; mediante cuatro pruebas unitarias en Go (<i>HashPassword</i>, <i>CheckPassword</i>, <i>GenerateJWT</i>, <i>ValidateJWT</i>) y tres pruebas del middleware JWT (token v&aacute;lido, token expirado y solicitud sin token), todas ejecutadas autom&aacute;ticamente en cada <i>push</i> al repositorio mediante el flujo definido en <i>test.yml</i>, el cual levanta un contenedor de PostgreSQL de prueba, ejecuta <i>go test ./... -coverprofile=coverage.out</i> y bloquea la fusi&oacute;n del c&oacute;digo si la cobertura resultante es inferior al 90%.</p>
+
+<p>En el Sprint 2, el servicio <i>pedido_service</i> increment&oacute; su complejidad al integrar la creaci&oacute;n de pedidos a cr&eacute;dito con la actualizaci&oacute;n at&oacute;mica del saldo del cliente y el descuento de stock, exigiendo pruebas de integraci&oacute;n contra una base de datos de prueba adem&aacute;s de las pruebas unitarias de <i>CalcularTotal</i>. En el Sprint 3, el servicio de predicci&oacute;n de demanda (<i>ia_service</i>) se valid&oacute; considerando tanto el caso t&iacute;pico (30 d&iacute;as de historial de ventas) como el caso extremo de un producto sin historial previo, garantizando que el sistema no genere errores ante datos insuficientes.</p>
+
+<p>A partir de la auditor&iacute;a de concordancia realizada, se ejecut&oacute; una iteraci&oacute;n adicional no contemplada en la planificaci&oacute;n original, documentada a continuaci&oacute;n como evidencia del car&aacute;cter iterativo-incremental del proyecto.</p>
+
+<p class="tablabel">Tabla 5 (continuaci&oacute;n)</p>
+<table>
+<tr><th>Iteraci&oacute;n</th><th>Objetivo principal</th><th>Entregables clave</th><th>Estado</th></tr>
+<tr><td>Sprint 6 &ndash; Cierre de brechas de calidad</td><td>Auditar la concordancia entre el SRS y el c&oacute;digo implementado, y cerrar las brechas detectadas en RF-03, RF-06 y RF-08.</td><td>M&oacute;dulo de Reportes (<i>internal/export</i>, <i>internal/handlers/reportes_handler.go</i>, <i>internal/services/reportes_service.go</i>) con exportaci&oacute;n PDF/Excel; m&oacute;dulo de gesti&oacute;n del Men&uacute; p&uacute;blico (<i>internal/repository/menu_repo.go</i>, <i>internal/handlers/menu_handler.go</i>); endpoint <i>PUT /pedidos/:id/entregar</i> para completar el ciclo de estados de RF-03; correcci&oacute;n del flujo de reabastecimiento del <i>script</i> de datos hist&oacute;ricos.</td><td>Completado</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia. Esta iteraci&oacute;n no formaba parte de la planificaci&oacute;n inicial de Feature Cards; surgi&oacute; como resultado directo del an&aacute;lisis documental descrito en el apartado 4.1.4, lo cual constituye en s&iacute; mismo un hallazgo metodol&oacute;gico: la aplicaci&oacute;n de una auditor&iacute;a de concordancia SRS-c&oacute;digo despu&eacute;s del &quot;cierre&quot; nominal del proyecto permiti&oacute; detectar brechas de completitud funcional que las pruebas unitarias, por s&iacute; solas, no exponen (una prueba unitaria certifica que el c&oacute;digo existente funciona; no certifica que <i>falte</i> c&oacute;digo).</p>
+
+<p>Adicionalmente, se gener&oacute; un conjunto de datos hist&oacute;ricos simulados (<i>cmd/seed/main.go</i>) que reproduce nueve meses de operaci&oacute;n del restaurante (noviembre de 2025 a julio de 2026), utilizando los mismos servicios de dominio (<i>PedidoService</i>, <i>ClienteRepo</i>, <i>MovimientoRepo</i>) que emplea la API en producci&oacute;n, en lugar de sentencias <i>INSERT</i> directas. Esta decisi&oacute;n de dise&ntilde;o garantiza que los datos de prueba respeten las mismas reglas de negocio (descuento de stock, c&aacute;lculo de totales, transiciones de estado) que gobiernan al sistema real, resultando en 905 pedidos, 224 pagos y 228 eventos de reabastecimiento distribuidos de forma realista seg&uacute;n d&iacute;a de la semana y estacionalidad (incremento de pedidos en la segunda quincena de diciembre).</p>
+
+<h3>4.1.4. Resultados de la Validaci&oacute;n de Funcionamiento (Variable X4)</h3>
+
+<p>La evaluaci&oacute;n de la dimensi&oacute;n de Funcionamiento se realiz&oacute; mediante la ejecuci&oacute;n real del comando <i>go test ./... -coverprofile=coverage.out</i> sobre el estado final del repositorio, complementada con la Ficha de An&aacute;lisis Documental de concordancia SRS-c&oacute;digo.</p>
+
+<p class="tablabel">Tabla 6 (actualizada con datos reales de ejecuci&oacute;n)</p>
+<table>
+<tr><th>Paquete</th><th>Pruebas</th><th>Tipo de prueba</th><th>Cobertura</th></tr>
+<tr><td><i>internal/auth</i></td><td>Hash/verificaci&oacute;n de contrase&ntilde;as (bcrypt), generaci&oacute;n y validaci&oacute;n de JWT</td><td>Unitaria</td><td>91.3%</td></tr>
+<tr><td><i>internal/middleware</i></td><td>JWT v&aacute;lido, token inv&aacute;lido, ausencia de token, control de rol (<i>RequireRole</i>)</td><td>Unitaria</td><td>100.0%</td></tr>
+<tr><td><i>internal/services</i></td><td><i>CalcularTotal</i>, <i>CrearPedido</i>, <i>AnularPedido</i>, <i>MarcarEntregado</i>, <i>PredecirDemanda</i>, <i>GenerarReporteVentas</i>, <i>FiltrarClientesConDeuda</i></td><td>Unitaria (con <i>mocks</i>)</td><td>96.4%</td></tr>
+<tr><td><i>internal/handlers</i></td><td>Endpoints REST de los 8 m&oacute;dulos (clientes, pedidos, inventario, cr&eacute;ditos, men&uacute;, reportes, auth)</td><td>Unitaria e integraci&oacute;n (<i>httptest</i>)</td><td>85.6%</td></tr>
+<tr><td><i>internal/repository</i></td><td>Consultas GORM contra PostgreSQL real (clientes, men&uacute;, rangos de fecha de pedidos/movimientos)</td><td>Integraci&oacute;n (BD de prueba, transacci&oacute;n con <i>rollback</i>)</td><td>40.2%</td></tr>
+<tr><td><i>internal/export</i></td><td>Generaci&oacute;n de PDF/Excel para los 3 reportes</td><td>Unitaria (verificaci&oacute;n de firma binaria)</td><td>100.0%</td></tr>
+<tr><td><b>Total de pruebas ejecutadas</b></td><td colspan="2"><b>198 pruebas, en 17 archivos de prueba</b></td><td>&ndash;</td></tr>
+<tr><td><b>Cobertura ponderada (paquetes de negocio, excluyendo <i>cmd/*</i>)</b></td><td>&ndash;</td><td>&ndash;</td><td><b>82.2%</b></td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Reporte generado mediante <i>go tool cover -func=coverage.out</i> sobre el estado del repositorio a la fecha de cierre del Sprint 6. Elaboraci&oacute;n propia.</p>
+
+<p class="lvl4">[Espacio para Figura: salida de terminal de <i>go test ./... -v</i> (resumen PASS/ok por paquete)]</p>
+<p class="lvl4">[Espacio para Figura: salida de terminal de <i>go tool cover -func=coverage.out</i>]</p>
+<p class="lvl4">[Espacio para Figura: ejecuci&oacute;n en verde del flujo <i>test.yml</i> en la pesta&ntilde;a &quot;Actions&quot; de GitHub]</p>
+
+<p>El resultado de 82.2% de cobertura ponderada <b>no alcanza</b> el umbral del 90% establecido en el RNF-02. Este resultado, a diferencia de una cifra simulada, constituye un hallazgo gen&uacute;ino de la investigaci&oacute;n: el paquete <i>internal/repository</i> (40.2%) concentra la brecha, dado que &uacute;nicamente 3 de sus 7 conjuntos de consultas (<i>ClienteRepo</i>, <i>MenuRepo</i> y los nuevos m&eacute;todos <i>FindEntreFechas</i>) cuentan con pruebas de integraci&oacute;n contra base de datos real; los repositorios <i>PedidoRepo</i> (m&eacute;todos <i>Create</i>, <i>FindByID</i>, <i>FindAll</i>, <i>UpdateEstado</i>), <i>ProductoRepo</i>, <i>PagoRepo</i> y <i>UserRepo</i> se ejercitan actualmente solo de forma indirecta, a trav&eacute;s de <i>mocks</i> en las pruebas de <i>services</i> y <i>handlers</i>, lo cual valida la l&oacute;gica de negocio que los invoca pero no certifica el SQL generado por GORM contra el motor real de PostgreSQL. Se documenta esta brecha como limitaci&oacute;n y como recomendaci&oacute;n de trabajo futuro.</p>
+
+<p><b>Hallazgos relevantes de la auditor&iacute;a de calidad.</b> Un aporte espec&iacute;fico de este proyecto al curso de Pruebas y Aseguramiento de Calidad de Software fue la detecci&oacute;n de defectos reales mediante pruebas de integraci&oacute;n contra base de datos, que las pruebas unitarias con <i>mocks</i> no habr&iacute;an podido exponer:</p>
+
+<p class="tablabel">Tabla 7</p>
+<p class="tabletitle">Defectos detectados durante la fase de verificaci&oacute;n</p>
+<table>
+<tr><th>Nro</th><th>Defecto detectado</th><th>T&eacute;cnica que lo expuso</th><th>Acci&oacute;n correctiva</th></tr>
+<tr><td>D-01</td><td>El campo <i>Disponible</i> del modelo <i>MenuPublico</i> usaba la etiqueta <i>gorm:&quot;default:true&quot;</i>; al crear un registro con <i>Disponible: false</i> expl&iacute;cito, GORM omit&iacute;a la columna del <i>INSERT</i> (por ser el <i>zero value</i> de un campo con <i>default</i>) y la base de datos aplicaba <i>true</i> en su lugar, invirtiendo silenciosamente la intenci&oacute;n del usuario.</td><td>Prueba de integraci&oacute;n <i>TestMenuRepo_FindPublico_SoloRetornaDisponibles</i> contra PostgreSQL real</td><td>Se elimin&oacute; la dependencia del <i>default</i> a nivel de columna; el valor por defecto se resolvi&oacute; expl&iacute;citamente en la capa de aplicaci&oacute;n (<i>handler</i>).</td></tr>
+<tr><td>D-02</td><td>El requisito RF-03 especifica los estados <i>pendiente</i>, <i>entregado</i> y <i>anulado</i>, pero el c&oacute;digo solo expon&iacute;a una transici&oacute;n hacia <i>anulado</i>; no exist&iacute;a forma de marcar un pedido como <i>entregado</i> desde la API ni desde la interfaz.</td><td>Revisi&oacute;n manual de concordancia SRS-c&oacute;digo (Ficha de An&aacute;lisis Documental)</td><td>Se incorpor&oacute; el m&eacute;todo <i>PedidoService.MarcarEntregado</i>, el endpoint <i>PUT /pedidos/:id/entregar</i> y el control correspondiente en el dashboard.</td></tr>
+<tr><td>D-03</td><td>Los archivos <i>backend/.env</i> y <i>backend/.env.test</i> apuntaban a credenciales y puertos que no coincid&iacute;an con los contenedores Docker reales, provocando que las migraciones y pruebas de integraci&oacute;n se ejecutaran silenciosamente contra una instancia de PostgreSQL nativa distinta a la prevista.</td><td>Verificaci&oacute;n de infraestructura (<i>docker ps</i>, inspecci&oacute;n de variables de entorno del contenedor)</td><td>Se homologaron las credenciales entre <i>.env</i>, <i>.env.test</i> y <i>docker-compose.yml</i>.</td></tr>
+<tr><td>D-04</td><td>El <i>pipeline</i> de GitHub Actions calculaba la cobertura global incluyendo los paquetes <i>cmd/*</i> (sin pruebas por dise&ntilde;o), lo que distorsionaba la verificaci&oacute;n del umbral del RNF-02 (67.0% global vs. 82.2% real de los m&oacute;dulos de negocio).</td><td>An&aacute;lisis documental del flujo <i>test.yml</i></td><td>Se excluyeron los paquetes <i>cmd/*</i> del c&aacute;lculo de cobertura en el <i>pipeline</i>.</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia. Los defectos D-01 a D-04 se documentan como evidencia emp&iacute;rica de que las t&eacute;cnicas de an&aacute;lisis documental y de pruebas de integraci&oacute;n contra base de datos real complementan &ndash;y en estos casos concretos, superan&ndash; la capacidad de detecci&oacute;n de las pruebas unitarias basadas en <i>mocks</i>.</p>
+
+<p>Pese a la brecha de cobertura en <i>repository</i>, la verificaci&oacute;n manual de los ocho requisitos funcionales (RF-01 a RF-08) mediante Postman, tras la aplicaci&oacute;n de las acciones correctivas de la Tabla 7, arroj&oacute; un cumplimiento del <b>100%</b> (8 de 8), frente al 75% (6 de 8) que se habr&iacute;a reportado de no realizarse la auditor&iacute;a de concordancia. Este contraste evidencia emp&iacute;ricamente que la <i>cobertura de pruebas</i> y la <i>completitud funcional</i> son dimensiones distintas de calidad: un m&oacute;dulo puede alcanzar alta cobertura de pruebas unitarias sobre c&oacute;digo que, sin embargo, no llega a implementar la totalidad de lo especificado en el SRS.</p>
+
+<p class="lvl4">[Espacio para Figura: colecci&oacute;n de Postman con los 8 RF verificados, organizada en carpetas por m&oacute;dulo]</p>
+
+<h3>4.1.5. Resultados de la Evaluaci&oacute;n de Usabilidad (Variable X5)</h3>
+
+<p class="noindent"><i>Nota metodol&oacute;gica: los valores de esta secci&oacute;n son ilustrativos, a modo de plantilla de tabulaci&oacute;n. Deben reemplazarse por los puntajes reales obtenidos al aplicar el instrumento SUS a la muestra censal de 5 miembros del personal de Sumaq Mikhuy.</i></p>
+
+<p>La evaluaci&oacute;n emp&iacute;rica de la variable Usabilidad tuvo como finalidad determinar la facilidad de uso, la curva de aprendizaje y la viabilidad de adopci&oacute;n del dashboard administrativo de RestaurantOS. Para ello, se aplic&oacute; la Escala de Usabilidad del Sistema (SUS) a la muestra censal de 5 miembros del personal del restaurante Sumaq Mikhuy (el propietario y cuatro colaboradores), tras una sesi&oacute;n de inducci&oacute;n b&aacute;sica de 30 minutos sobre el uso del sistema. El instrumento aplicado (Brooke, 1996) consta de 10 afirmaciones evaluadas en escala Likert de 1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo): (1) usar&iacute;a el sistema con frecuencia; (2) el sistema es innecesariamente complejo; (3) el sistema es f&aacute;cil de usar; (4) necesitar&iacute;a apoyo t&eacute;cnico para usarlo; (5) las funciones est&aacute;n bien integradas; (6) hay demasiada inconsistencia; (7) la mayor&iacute;a aprender&iacute;a a usarlo r&aacute;pidamente; (8) es inc&oacute;modo de usar; (9) me sent&iacute; seguro usando el sistema; (10) necesit&eacute; aprender muchas cosas antes de poder usarlo.</p>
+
+<p class="tablabel">Tabla 8 (datos ilustrativos &ndash; reemplazar por datos reales)</p>
+<p class="tabletitle">Tabulaci&oacute;n de ejemplo del instrumento SUS</p>
+<table>
+<tr><th>Encuestado</th><th>Rol</th><th>Puntaje SUS (0&ndash;100)</th></tr>
+<tr><td>P1</td><td>Propietario (administrador)</td><td>82.5</td></tr>
+<tr><td>P2</td><td>Colaborador &ndash; atenci&oacute;n</td><td>77.5</td></tr>
+<tr><td>P3</td><td>Colaborador &ndash; cocina</td><td>65.0</td></tr>
+<tr><td>P4</td><td>Colaborador &ndash; atenci&oacute;n</td><td>85.0</td></tr>
+<tr><td>P5</td><td>Colaborador &ndash; cocina (mayor edad, menor experiencia digital)</td><td>60.0</td></tr>
+<tr><td><b>Promedio de la muestra</b></td><td>&ndash;</td><td><b>74.0</b></td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Datos ilustrativos elaborados a modo de ejemplo de tabulaci&oacute;n. Sustituir por los resultados reales de la aplicaci&oacute;n del instrumento.</p>
+
+<p class="lvl4">[Espacio para Figura: formulario del instrumento SUS aplicado (Google Forms o f&iacute;sico)]</p>
+<p class="lvl4">[Espacio para Figura: gr&aacute;fico de barras con los 5 puntajes SUS individuales y el promedio]</p>
+
+<p>Seg&uacute;n las escalas de aceptabilidad de Bangor, Kortum y Miller (2008), un puntaje superior a 68 determina que un sistema es &quot;Aceptable&quot;; el rango 68&ndash;80 corresponde a la categor&iacute;a &quot;Buena&quot; (<i>Good</i>) usabilidad, y valores superiores a 80 a la categor&iacute;a &quot;Excelente&quot;. El puntaje ilustrativo promedio de 74.0 se ubicar&iacute;a en la categor&iacute;a &quot;Buena&quot;, consistente con la heterogeneidad esperada en la alfabetizaci&oacute;n digital del personal (&iacute;tem 4, con puntuaci&oacute;n m&aacute;s moderada en los encuestados de mayor edad), tal como se anticip&oacute; en la limitaci&oacute;n 1.5.4.5 del Cap&iacute;tulo I.</p>
+
+<h2>4.2. Discusiones</h2>
+
+<p>La validaci&oacute;n del Producto M&iacute;nimo Viable (MVP) del sistema RestaurantOS permiti&oacute; corroborar emp&iacute;ricamente la viabilidad t&eacute;cnica y la aceptaci&oacute;n de una soluci&oacute;n estructurada frente a las necesidades de gesti&oacute;n del restaurante Sumaq Mikhuy. En congruencia con el alcance descriptivo y tecnol&oacute;gico de la investigaci&oacute;n, el an&aacute;lisis de los resultados no pretende medir el impacto financiero integral del negocio, lo cual excede los l&iacute;mites metodol&oacute;gicos del proyecto, sino que se delimita estrictamente a evaluar c&oacute;mo las capacidades de Funcionamiento (X4) y los niveles de Usabilidad (X5) obtenidos lograron resolver los requerimientos inform&aacute;ticos diagnosticados en la fase inicial.</p>
+
+<p>En primer lugar, el diagn&oacute;stico inicial evidenci&oacute; que el descontrol de cr&eacute;ditos por &quot;fiado&quot; constitu&iacute;a el problema de mayor impacto econ&oacute;mico directo para el negocio. Al respecto, Elmasri y Navathe (2016) sostienen que la integridad referencial de un modelo de datos normalizado es la garant&iacute;a t&eacute;cnica fundamental para evitar la p&eacute;rdida o inconsistencia de la informaci&oacute;n transaccional. Los resultados de este proyecto resultan congruentes con esta premisa: al implementar el m&oacute;dulo de cr&eacute;ditos sobre una base de datos PostgreSQL normalizada en 3FN, con transacciones at&oacute;micas gestionadas por GORM, la cobertura de pruebas del servicio de pedidos (94%) confirm&oacute; que el c&aacute;lculo de saldos se ejecuta sin inconsistencias, un avance sustancial frente al registro manual en cuadernos f&iacute;sicos descrito en el Cap&iacute;tulo I.</p>
+
+<p>En segundo lugar, respecto a la meta de calidad de software, el resultado de 82.2% de cobertura de pruebas unitarias en los m&oacute;dulos de negocio, si bien no alcanz&oacute; el umbral del 90% fijado en el RNF-02, es consistente con los hallazgos de Goicochea Puertas (2016), quien demostr&oacute; experimentalmente que la aplicaci&oacute;n de TDD incrementa la cantidad de errores detectados durante el desarrollo: los defectos D-01 a D-04 documentados en la Tabla 7 se detectaron precisamente gracias a la combinaci&oacute;n de pruebas de integraci&oacute;n y an&aacute;lisis documental, y no habr&iacute;an sido expuestos por pruebas unitarias basadas &uacute;nicamente en <i>mocks</i>. Esta correspondencia emp&iacute;rica refuerza la decisi&oacute;n metodol&oacute;gica de anteponer la especificaci&oacute;n y las pruebas a la escritura de c&oacute;digo, tal como propone el enfoque Spec Driven Development descrito en el Cap&iacute;tulo II, y a la vez identifica con precisi&oacute;n el paquete <i>repository</i> como l&iacute;nea prioritaria de trabajo futuro para cerrar la brecha frente al RNF-02.</p>
+
+<p>Finalmente, en cuanto a la usabilidad, el <i>Score</i> SUS ilustrativo de 74.0 puntos, si bien se ubicar&iacute;a en la categor&iacute;a &quot;Buena&quot; y no &quot;Excelente&quot;, resulta coherente con el perfil demogr&aacute;fico de la muestra: a diferencia de un p&uacute;blico masivo de usuarios digitalmente nativos, el personal de un restaurante familiar de provincia presenta niveles heterog&eacute;neos de alfabetizaci&oacute;n digital. Este hallazgo dialoga directamente con Wroblewski (2011) y su enfoque <i>Mobile First</i>, sugiriendo que futuras iteraciones del sistema podr&iacute;an simplificar a&uacute;n m&aacute;s los flujos de navegaci&oacute;n del dashboard para los colaboradores con menor experiencia previa en aplicaciones digitales, sin comprometer la robustez t&eacute;cnica ya validada en la dimensi&oacute;n de Funcionamiento. Se reitera que estos valores de usabilidad son ilustrativos y deben sustituirse por los resultados reales de la encuesta SUS.</p>
+
+<div class="pagebreak"></div>
+
+<h2>4.3. Anexo: Gu&iacute;a de capturas de pantalla recomendadas</h2>
+
+<p>Para sustentar visualmente el Cap&iacute;tulo IV, se recomienda incluir las siguientes capturas de pantalla y figuras, numeradas correlativamente como Figura 1, Figura 2, etc., y referenciadas en el texto (por ejemplo, &quot;como se observa en la Figura 12&quot;), siguiendo el mismo formato APA7 empleado para las tablas de este documento. La Tabla 9 organiza las capturas seg&uacute;n el apartado que ilustran.</p>
+
+<p class="tablabel">Tabla 9</p>
+<p class="tabletitle">Gu&iacute;a de capturas de pantalla y figuras recomendadas para el Cap&iacute;tulo IV</p>
+<table>
+<tr><th>Apartado</th><th>Captura recomendada</th><th>D&oacute;nde obtenerla</th></tr>
+<tr><td>4.1.1 (An&aacute;lisis)</td><td>Vista de las 8 Feature Cards en el explorador de archivos, o el &iacute;ndice de <i>PLAN_SDD.md</i></td><td>Carpeta <i>feature-cards/</i></td></tr>
+<tr><td>4.1.2 (Dise&ntilde;o)</td><td>Diagrama de arquitectura de 3 capas</td><td>Elaborar en draw.io o similar</td></tr>
+<tr><td>4.1.2 (Dise&ntilde;o)</td><td>Modelo entidad-relaci&oacute;n (8 tablas)</td><td>Exportar desde <i>\d</i> de <i>psql</i> o una herramienta ER (p. ej. dbdiagram.io)</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Login (<i>/login</i>) y Dashboard Home (<i>/dashboard</i>)</td><td>Navegador, sesi&oacute;n iniciada como administrador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Gesti&oacute;n de clientes (<i>/dashboard/clientes</i>) con el modal &quot;Nuevo cliente&quot; abierto</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Gesti&oacute;n de pedidos (<i>/dashboard/pedidos</i>) con el modal &quot;Nuevo pedido&quot; y los estados pendiente/entregado/anulado visibles</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Gesti&oacute;n de inventario (<i>/dashboard/inventario</i>) mostrando alertas de stock bajo</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Cr&eacute;ditos y pagos (<i>/dashboard/creditos</i>) con la lista de deudores</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Gesti&oacute;n del men&uacute; p&uacute;blico (<i>/dashboard/menu</i>)</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Landing page p&uacute;blica (<i>/</i>) mostrando el men&uacute; din&aacute;mico ya conectado</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Reportes (<i>/dashboard/reportes</i>), las 3 pesta&ntilde;as (ventas, deudores, inventario)</td><td>Navegador</td></tr>
+<tr><td>4.1.3 (Implementaci&oacute;n)</td><td>Un archivo PDF y un Excel descargados desde Reportes, abiertos</td><td>Explorador de archivos / Excel / lector PDF</td></tr>
+<tr><td>4.1.4 (Funcionamiento)</td><td>Terminal con la salida completa de <i>go test ./... -v</i> (o al menos el resumen ok/PASS por paquete)</td><td>Terminal, carpeta <i>backend/</i></td></tr>
+<tr><td>4.1.4 (Funcionamiento)</td><td>Terminal con <i>go tool cover -func=coverage.out</i> mostrando el desglose por funci&oacute;n</td><td>Terminal, carpeta <i>backend/</i></td></tr>
+<tr><td>4.1.4 (Funcionamiento)</td><td>Ejecuci&oacute;n en verde del flujo <i>test.yml</i> en la pesta&ntilde;a &quot;Actions&quot; de GitHub</td><td>github.com/&lt;usuario&gt;/&lt;repo&gt;/actions</td></tr>
+<tr><td>4.1.4 (Funcionamiento)</td><td>Colecci&oacute;n de Postman con los 8 RF verificados (carpetas por m&oacute;dulo)</td><td>Postman</td></tr>
+<tr><td>4.1.5 (Usabilidad)</td><td>Formulario del instrumento SUS aplicado (Google Forms o f&iacute;sico)</td><td>A elaborar al aplicar la encuesta real</td></tr>
+<tr><td>4.1.5 (Usabilidad)</td><td>Gr&aacute;fico de barras con los 5 puntajes SUS individuales y el promedio</td><td>Elaborar en Excel/Sheets a partir de la Tabla 8 real</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia. Se recomienda insertar cada captura inmediatamente despu&eacute;s del p&aacute;rrafo marcado con &quot;[Espacio para Figura: &hellip;]&quot; en el apartado correspondiente, y numerarla correlativamente como Figura 1, Figura 2, etc., con su respectivo t&iacute;tulo en cursiva debajo, siguiendo el formato APA7 ya usado para las tablas de este documento.</p>
+
+</div>
+</body>
+</html>

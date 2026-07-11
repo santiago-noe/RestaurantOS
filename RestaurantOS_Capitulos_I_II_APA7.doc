@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>RestaurantOS - Capitulos I y II</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page Section1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1 {page:Section1;}
+body { font-family:'Times New Roman', Times, serif; font-size:12pt; line-height:2; color:#000; }
+p { margin:0 0 0 0; text-indent:0.5in; text-align:justify; }
+p.noindent { text-indent:0; }
+p.center { text-align:center; text-indent:0; }
+.titlepage p { text-align:center; text-indent:0; }
+h1.chap { text-align:center; font-size:12pt; font-weight:bold; text-indent:0; margin-top:0; margin-bottom:0; }
+h2 { text-align:left; font-size:12pt; font-weight:bold; text-indent:0; margin-top:12pt; margin-bottom:0; }
+h3 { text-align:left; font-size:12pt; font-weight:bold; font-style:italic; text-indent:0; margin-top:12pt; margin-bottom:0; }
+p.lvl4 { text-indent:0.5in; text-align:justify; }
+p.lvl4 b i { }
+.pagebreak { page-break-before:always; }
+table { border-collapse:collapse; width:100%; margin-top:6pt; margin-bottom:6pt; font-size:11pt; }
+td, th { border:1px solid #000; padding:5px; vertical-align:top; text-align:left; }
+th { font-weight:bold; }
+.tablenote { font-size:11pt; text-indent:0; margin-top:4pt; }
+.tablabel { font-weight:bold; text-indent:0; margin-top:10pt; }
+.tabletitle { font-style:italic; text-indent:0; }
+ul, ol { margin-left:0.5in; }
+li { text-align:justify; margin-bottom:6pt; }
+</style>
+</head>
+<body>
+<div class="Section1">
+
+<!-- ============ PORTADA ============ -->
+<div class="titlepage">
+<p><b>UNIVERSIDAD NACIONAL DE SAN CRIST&Oacute;BAL DE HUAMANGA</b></p>
+<p><b>FACULTAD DE INGENIER&Iacute;A DE MINAS GEOLOG&Iacute;A Y CIVIL</b></p>
+<p><b>ESCUELA PROFESIONAL DE INGENIER&Iacute;A DE SISTEMAS</b></p>
+<br><br><br>
+<p><b>Curso</b></p>
+<p>Pruebas y Aseguramiento de la Calidad de Software</p>
+<br>
+<p><b>Proyecto</b></p>
+<p><b>&quot;RestaurantOS: sistema de gesti&oacute;n integral para el restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n, 2026&quot;</b></p>
+<br><br>
+<p>PRESENTADO POR:</p>
+<p>Santiago Noe</p>
+<br><br>
+<p>DOCENTE:</p>
+<p><b>Mg. Ing. Richard Zapata Casaverde</b></p>
+<br><br><br>
+<p>Ayacucho &ndash; Per&uacute;</p>
+<p>2026</p>
+</div>
+
+<div class="pagebreak"></div>
+
+<!-- ============ CAPITULO I ============ -->
+<h1 class="chap">Cap&iacute;tulo I</h1>
+<h1 class="chap">Planteamiento del Problema</h1>
+
+<h2>1.1 Diagn&oacute;stico y enunciado del problema</h2>
+
+<p>La gastronom&iacute;a constituye uno de los principales motores del turismo receptivo en el Per&uacute;, y la gesti&oacute;n empresarial de los negocios que la sostienen atraviesa un proceso de transformaci&oacute;n digital cada vez m&aacute;s acelerado. A nivel global, la industria de restaurantes (foodservice) ha adoptado sistemas de punto de venta (POS) y plataformas de gesti&oacute;n integral para optimizar sus operaciones, reducir tiempos de atenci&oacute;n y fortalecer el control financiero. Seg&uacute;n el reporte anual de Toast Inc. (2024) sobre el estado de la industria restaurantera, m&aacute;s del 75% de los establecimientos gastron&oacute;micos en mercados desarrollados utiliza alg&uacute;n tipo de software para el registro de pedidos, el control de inventario y la generaci&oacute;n de reportes de ventas, evidenciando que la digitalizaci&oacute;n de procesos ya no constituye una ventaja competitiva sino un est&aacute;ndar operativo.</p>
+
+<p>En el contexto peruano, el sector restaurantero enfrenta una dicotom&iacute;a similar a la observada en otros rubros del comercio digital: mientras las cadenas y restaurantes de las principales ciudades han adoptado sistemas de gesti&oacute;n especializados, los negocios gastron&oacute;micos de provincias contin&uacute;an operando de manera artesanal. Seg&uacute;n el Instituto Nacional de Estad&iacute;stica e Inform&aacute;tica (INEI, 2024), el sector alojamiento y restaurantes representa una proporci&oacute;n significativa del valor agregado bruto de los servicios en la regi&oacute;n Ayacucho, impulsado principalmente por el turismo receptivo hacia los complejos arqueol&oacute;gicos de la zona. Sin embargo, la formalizaci&oacute;n tecnol&oacute;gica de estos negocios avanza a un ritmo considerablemente m&aacute;s lento que en la capital.</p>
+
+<p>Aterrizando esta realidad en el distrito de Vilcashuam&aacute;n, provincia homónima de la regi&oacute;n Ayacucho &ndash; reconocido nacionalmente por albergar el conjunto arqueol&oacute;gico incaico del Templo del Sol y la Luna, la Ushnu y Muyu Muqu &ndash; se evidencia un comportamiento empresarial caracterizado por la gesti&oacute;n manual de las operaciones gastron&oacute;micas. El restaurante Sumaq Mikhuy, negocio familiar dedicado a la oferta de platos t&iacute;picos ayacuchanos (puca picante, mondongo, cuy chactado, patachi, entre otros) tanto a turistas como a la poblaci&oacute;n local, ilustra esta problem&aacute;tica de manera representativa.</p>
+
+<p>El diagn&oacute;stico espec&iacute;fico revela que el restaurante gestiona la totalidad de sus operaciones &ndash; toma de pedidos, control de cr&eacute;ditos (&quot;fiado&quot;), manejo de inventario de insumos y generaci&oacute;n de reportes de ventas &ndash; mediante cuadernos de apuntes y hojas de c&aacute;lculo dispersas, sin ning&uacute;n tipo de automatizaci&oacute;n o respaldo digital centralizado. Esta situaci&oacute;n se agrava considerablemente durante los periodos de alta afluencia tur&iacute;stica (Semana Santa, Fiestas Patrias y el arribo de caravanas de visitantes hacia el complejo arqueol&oacute;gico), momentos en los que la demanda de atenci&oacute;n supera ampliamente la capacidad de registro manual del personal.</p>
+
+<p>Sin embargo, el uso de estas pr&aacute;cticas manuales presenta deficiencias cr&iacute;ticas para un negocio que demanda control financiero y operativo, las cuales se detallan a continuaci&oacute;n:</p>
+
+<ol>
+<li><b>Descontrol de cr&eacute;ditos y cuentas por cobrar (&quot;fiado&quot;).</b> En localidades peque&ntilde;as como Vilcashuam&aacute;n es una pr&aacute;ctica comercial habitual que los clientes frecuentes &ndash; trabajadores municipales, docentes, comerciantes del mercado local &ndash; consuman a cr&eacute;dito, comprometi&eacute;ndose a cancelar la deuda a fin de mes. Al registrarse estas deudas en cuadernos f&iacute;sicos, propensos al extrav&iacute;o, deterioro o ileg&iacute;bilidad de la caligraf&iacute;a, el propietario enfrenta serias dificultades para determinar con exactitud cu&aacute;nto le debe cada cliente. Una revisi&oacute;n exploratoria de la gesti&oacute;n del negocio (ver Anexo 1) evidenci&oacute; que, en promedio, el 30% de los registros de cr&eacute;dito de los &uacute;ltimos tres meses presentaban inconsistencias, tachones o resultaban ileg&iacute;bles, generando p&eacute;rdidas econ&oacute;micas directas por deudas incobrables u olvidadas.</li>
+<li><b>Ausencia de control de inventario.</b> El restaurante no cuenta con un mecanismo que relacione el consumo de insumos (papa, carne, especias, cuy, ma&iacute;z, entre otros) con los pedidos efectivamente vendidos. Esto genera compras reactivas e ineficientes: en ocasiones se adquieren insumos en exceso que terminan malogr&aacute;ndose, mientras que en otras se produce el desabastecimiento de un plato de alta demanda en pleno servicio, generando insatisfacci&oacute;n en el comensal, situaci&oacute;n particularmente cr&iacute;tica en el caso de turistas con tiempo limitado antes de abordar su transporte de retorno.</li>
+<li><b>Ineficiencia en el registro de pedidos y errores de cobro.</b> La toma manual de pedidos mediante comandas de papel deriva frecuentemente en errores de transcripci&oacute;n, extrav&iacute;o de comandas y demoras en la comunicaci&oacute;n entre el mesero y la cocina. Asimismo, la ausencia de un c&aacute;lculo autom&aacute;tico del total del pedido expone al negocio a errores de cobro, tanto por defecto (p&eacute;rdida para el restaurante) como por exceso (afectando la confianza del cliente).</li>
+<li><b>Falta de informaci&oacute;n gerencial para la toma de decisiones.</b> Al no existir un sistema que centralice las ventas, el propietario carece de reportes que le permitan identificar los platos m&aacute;s vendidos, las horas de mayor afluencia o proyectar la demanda de los d&iacute;as siguientes, factores decisivos para la planificaci&oacute;n de compras e insumos en un negocio con alta estacionalidad tur&iacute;stica.</li>
+</ol>
+
+<p>La ausencia de un sistema de gesti&oacute;n integral genera consecuencias negativas tangibles tanto para la econom&iacute;a familiar del negocio como para la experiencia del comensal:</p>
+
+<ul>
+<li><b>P&eacute;rdidas econ&oacute;micas directas:</b> deudas incobrables por registros ileg&iacute;bles y mermas de insumos por falta de planificaci&oacute;n de compras.</li>
+<li><b>Ineficiencia operativa:</b> demoras en la atenci&oacute;n durante las horas y temporadas de mayor afluencia tur&iacute;stica.</li>
+<li><b>Debilidad gerencial:</b> decisiones de compra y de precios tomadas sin sustento en datos hist&oacute;ricos de ventas.</li>
+</ul>
+
+<p>Ante este escenario, se identifica la necesidad de una soluci&oacute;n tecnol&oacute;gica que, aprovechando la creciente disponibilidad de conectividad y dispositivos m&oacute;viles en la regi&oacute;n, permita centralizar la gesti&oacute;n de pedidos, cr&eacute;ditos, inventario y reportes del restaurante Sumaq Mikhuy, incorporando adem&aacute;s funcionalidades b&aacute;sicas de an&aacute;lisis predictivo que apoyen la planificaci&oacute;n operativa del negocio. La propuesta, denominada RestaurantOS, se desarrolla bajo la metodolog&iacute;a Spec Driven Development (SDD), la cual antepone la especificaci&oacute;n rigurosa de requisitos y el dise&ntilde;o guiado por pruebas a la escritura de c&oacute;digo, garantizando as&iacute; un producto de software auditable y de calidad verificable.</p>
+
+<p>En este sentido, se formul&oacute; la siguiente interrogante principal que gui&oacute; la investigaci&oacute;n: &iquest;Cu&aacute;les son los resultados del desarrollo de un sistema de gesti&oacute;n integral (RestaurantOS), bajo la metodolog&iacute;a Spec Driven Development, para el restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n, 2026?</p>
+
+<h2>1.2. Formulaci&oacute;n del Problema</h2>
+
+<h3>1.2.1. Problema General</h3>
+<p>&iquest;Cu&aacute;les son los resultados del desarrollo de un sistema de gesti&oacute;n integral (RestaurantOS), bajo la metodolog&iacute;a Spec Driven Development, para el restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n, 2026?</p>
+
+<h3>1.2.2. Problemas espec&iacute;ficos</h3>
+<ol type="a">
+<li>&iquest;Cu&aacute;les son los resultados de la especificaci&oacute;n de requisitos de software (SRS) y de las historias de usuario elaboradas para el sistema RestaurantOS?</li>
+<li>&iquest;Cu&aacute;les son los resultados del dise&ntilde;o de la base de datos normalizada y de la arquitectura del sistema RestaurantOS?</li>
+<li>&iquest;Cu&aacute;les son los resultados de la implementaci&oacute;n de los m&oacute;dulos funcionales (autenticaci&oacute;n, clientes, pedidos, cr&eacute;ditos, inventario, reportes y predicci&oacute;n) del sistema RestaurantOS?</li>
+<li>&iquest;Cu&aacute;l es el nivel de cobertura obtenido en las pruebas unitarias aplicadas al sistema RestaurantOS?</li>
+<li>&iquest;Cu&aacute;les son los resultados de la validaci&oacute;n del correcto funcionamiento de los m&oacute;dulos principales del sistema RestaurantOS?</li>
+</ol>
+
+<h2>1.3. Objetivos</h2>
+
+<h3>1.3.1. Objetivo General</h3>
+<p>Desarrollar un sistema de gesti&oacute;n integral (RestaurantOS), bajo la metodolog&iacute;a Spec Driven Development, para el restaurante Sumaq Mikhuy del distrito de Vilcashuam&aacute;n, con el prop&oacute;sito de centralizar la gesti&oacute;n de pedidos, cr&eacute;ditos, inventario y reportes, mejorando el control operativo y financiero del negocio.</p>
+
+<h3>1.3.2. Objetivos Espec&iacute;ficos</h3>
+<ol type="a">
+<li>Determinar los resultados de la especificaci&oacute;n de requisitos de software (SRS) y de las historias de usuario elaboradas para el sistema RestaurantOS.</li>
+<li>Determinar los resultados del dise&ntilde;o de la base de datos normalizada y de la arquitectura del sistema RestaurantOS.</li>
+<li>Determinar los resultados de la implementaci&oacute;n de los m&oacute;dulos funcionales del sistema RestaurantOS.</li>
+<li>Establecer el nivel de cobertura obtenido en las pruebas unitarias aplicadas al sistema RestaurantOS.</li>
+<li>Validar el correcto funcionamiento de los m&oacute;dulos principales del sistema RestaurantOS.</li>
+</ol>
+
+<h2>1.4. Hip&oacute;tesis</h2>
+
+<p>En el &aacute;mbito de la investigaci&oacute;n cient&iacute;fica, la formulaci&oacute;n de hip&oacute;tesis no constituye un requisito universal y obligatorio, sino que obedece estrictamente al prop&oacute;sito y alcance inicial del estudio. De acuerdo con Hern&aacute;ndez-Sampieri et al. (2014), las hip&oacute;tesis son inherentes a las investigaciones cuantitativas cuyos enfoques son correlacionales o explicativos. En el caso de los estudios con alcance descriptivo, la formulaci&oacute;n de hip&oacute;tesis solo es pertinente si el investigador tiene la intenci&oacute;n de pronosticar un dato, figura o hecho espec&iacute;fico.</p>
+
+<p>Esta perspectiva metodol&oacute;gica es respaldada por Bernal (2016), quien sostiene que la investigaci&oacute;n de tipo descriptivo no requiere comprobar una suposici&oacute;n estructurada mediante una hip&oacute;tesis. En su lugar, el rigor y la direcci&oacute;n del estudio se sostienen en las preguntas de investigaci&oacute;n, las cuales se desprenden l&oacute;gicamente del planteamiento del problema, los objetivos trazados y el marco te&oacute;rico que fundamenta el proyecto.</p>
+
+<p>En coherencia con los lineamientos metodol&oacute;gicos citados, y dado que la presente investigaci&oacute;n posee un nivel puramente descriptivo orientado a determinar los resultados del desarrollo tecnol&oacute;gico y a evaluar el funcionamiento del sistema RestaurantOS, no se formul&oacute; una hip&oacute;tesis de investigaci&oacute;n. El desarrollo del estudio y la validaci&oacute;n de sus resultados est&aacute;n guiados &iacute;ntegramente por el cumplimiento de los objetivos espec&iacute;ficos planteados.</p>
+
+<h2>1.5. Justificaci&oacute;n y Delimitaci&oacute;n de la Investigaci&oacute;n</h2>
+
+<h3>1.5.1 Importancia</h3>
+<p>La presente investigaci&oacute;n reviste una importancia significativa al proponer una soluci&oacute;n tecnol&oacute;gica que moderniza la gesti&oacute;n administrativa de un negocio familiar de la localidad de Vilcashuam&aacute;n. En un contexto donde la transformaci&oacute;n digital de la peque&ntilde;a empresa es cada vez m&aacute;s necesaria, dotar al restaurante Sumaq Mikhuy de un sistema propio significa dar un paso hacia la formalizaci&oacute;n de su gesti&oacute;n financiera y operativa. El proyecto trasciende el ejercicio acad&eacute;mico para convertirse en una herramienta de utilidad directa para la econom&iacute;a familiar del negocio, reduciendo la brecha tecnol&oacute;gica que separa a los peque&ntilde;os negocios gastron&oacute;micos provinciales de las cadenas formalizadas de las grandes ciudades.</p>
+
+<h3>1.5.2. Justificaci&oacute;n</h3>
+
+<p class="lvl4"><b>1.5.2.1. Justificaci&oacute;n Social.</b> Socialmente, la investigaci&oacute;n busca mejorar la calidad del servicio brindado tanto a la poblaci&oacute;n local como a los visitantes que llegan a Vilcashuam&aacute;n atra&iacute;dos por su patrimonio arqueol&oacute;gico. Al reducir los tiempos de atenci&oacute;n y los errores de cobro, se fortalece la confianza del comensal en el negocio. Adem&aacute;s, al formalizar el registro de cr&eacute;ditos, se protege tanto al propietario del restaurante &ndash;quien deja de asumir p&eacute;rdidas por deudas olvidadas&ndash; como al cliente, que cuenta con un registro transparente y verificable de su estado de cuenta.</p>
+
+<p class="lvl4"><b>1.5.2.2 Justificaci&oacute;n Econ&oacute;mica.</b> El impacto econ&oacute;mico es directo y tangible para el negocio familiar. El sistema RestaurantOS reduce las p&eacute;rdidas asociadas a deudas incobrables mediante el registro digital y trazable de los cr&eacute;ditos otorgados, y optimiza las decisiones de compra de insumos mediante el control de inventario y la predicci&oacute;n b&aacute;sica de demanda, disminuyendo tanto el sobrestock como el desabastecimiento en los d&iacute;as de mayor afluencia tur&iacute;stica. Asimismo, contar con reportes de ventas confiables permite al propietario tomar decisiones informadas sobre precios, promociones y horarios de mayor demanda.</p>
+
+<p class="lvl4"><b>1.5.2.3. Justificaci&oacute;n T&eacute;cnica.</b> Desde la perspectiva de la Ingenier&iacute;a de Sistemas, este proyecto se justifica por la aplicaci&oacute;n rigurosa de la metodolog&iacute;a Spec Driven Development (SDD), la cual antepone la especificaci&oacute;n formal de requisitos (SRS), las historias de usuario y el dise&ntilde;o de pruebas unitarias a la escritura de c&oacute;digo, garantizando trazabilidad entre lo especificado y lo implementado. La arquitectura desacoplada cliente-servidor, la autenticaci&oacute;n basada en JSON Web Tokens (JWT), el cifrado de contrase&ntilde;as mediante bcrypt y el dise&ntilde;o de una base de datos relacional normalizada en tercera forma normal (3FN) constituyen decisiones t&eacute;cnicas orientadas a asegurar la seguridad, integridad y mantenibilidad del sistema. La meta de cobertura de pruebas unitarias igual o superior al 90% responde directamente a los principios del curso de Pruebas y Aseguramiento de la Calidad de Software, en el cual se enmarca el presente proyecto.</p>
+
+<h3>1.5.3. Delimitaci&oacute;n</h3>
+
+<p class="lvl4"><b>1.5.3.1. Delimitaci&oacute;n Espacial.</b> El estudio y la implementaci&oacute;n del software se circunscriben al restaurante Sumaq Mikhuy, ubicado en el distrito de Vilcashuam&aacute;n, provincia de Vilcashuam&aacute;n, regi&oacute;n Ayacucho, enfoc&aacute;ndose en las operaciones propias de dicho negocio para garantizar la pertinencia y aplicabilidad de los resultados.</p>
+
+<p class="lvl4"><b>1.5.3.2. Delimitaci&oacute;n Temporal.</b> La investigaci&oacute;n abarca el periodo del a&ntilde;o 2026, considerando las fases de especificaci&oacute;n, dise&ntilde;o, implementaci&oacute;n y pruebas del sistema.</p>
+
+<p class="lvl4"><b>1.5.3.3. Delimitaci&oacute;n Tem&aacute;tica.</b> El proyecto se enmarca en la l&iacute;nea de investigaci&oacute;n de Ingenier&iacute;a de Software y Aseguramiento de la Calidad, espec&iacute;ficamente en el desarrollo de aplicaciones web bajo metodolog&iacute;as guiadas por especificaci&oacute;n y pruebas (SDD/TDD).</p>
+
+<h3>1.5.4. Limitaciones</h3>
+<p>A pesar de la planificaci&oacute;n rigurosa y el sustento te&oacute;rico del proyecto, se reconocen ciertas restricciones de car&aacute;cter t&eacute;cnico, metodol&oacute;gico y contextual que delimitan el alcance del presente estudio:</p>
+
+<p class="lvl4"><b>1.5.4.1. Alcance funcional acotado al MVP.</b> El desarrollo del software se enfoca estrictamente en la entrega de un Producto M&iacute;nimo Viable con los m&oacute;dulos esenciales de autenticaci&oacute;n, clientes, pedidos, cr&eacute;ditos, inventario, reportes y predicci&oacute;n b&aacute;sica de demanda. Quedan fuera del alcance de esta investigaci&oacute;n caracter&iacute;sticas avanzadas como pasarelas de pago electr&oacute;nico integradas, aplicaciones m&oacute;viles nativas o m&oacute;dulos de reservas en l&iacute;nea.</p>
+
+<p class="lvl4"><b>1.5.4.2. Validaci&oacute;n en entorno controlado.</b> Las pruebas funcionales y de aceptaci&oacute;n se aplican en un entorno de desarrollo controlado, con datos de prueba representativos de la operaci&oacute;n real del restaurante. Al no realizarse a&uacute;n un despliegue masivo en producci&oacute;n, los resultados podr&iacute;an no reflejar en su totalidad el comportamiento del sistema ante picos extremos de concurrencia.</p>
+
+<p class="lvl4"><b>1.5.4.3. Desarrollo a cargo de un &uacute;nico investigador.</b> Al tratarse de un proyecto acad&eacute;mico desarrollado por un solo investigador, la aplicaci&oacute;n de la metodolog&iacute;a SDD se adapta a un contexto de trabajo individual, lo que difiere de un equipo de desarrollo multidisciplinario t&iacute;pico de la industria.</p>
+
+<p class="lvl4"><b>1.5.4.4. Dependencia de tecnolog&iacute;as en constante evoluci&oacute;n.</b> El stack tecnol&oacute;gico utilizado se encuentra en permanente actualizaci&oacute;n. El c&oacute;digo y la arquitectura generados corresponden al estado y versiones de estas herramientas en el a&ntilde;o de desarrollo, lo que eventualmente podr&iacute;a requerir refactorizaci&oacute;n futura para mantener su compatibilidad.</p>
+
+<p class="lvl4"><b>1.5.4.5. Brecha digital y resistencia al cambio.</b> Se prev&eacute; la existencia de una curva de aprendizaje en el personal del restaurante, habituado al registro manual en cuadernos, quienes podr&iacute;an percibir el uso de un sistema digital como una barrera inicial hasta familiarizarse con la nueva herramienta.</p>
+
+<p class="lvl4"><b>1.5.4.6. Dependencia de la infraestructura de conectividad.</b> La experiencia final de uso del sistema est&aacute; subordinada a la calidad del servicio de internet disponible en el distrito de Vilcashuam&aacute;n. Las posibles fallas de red o cortes de conectividad escapan al control de esta investigaci&oacute;n y pueden afectar la percepci&oacute;n de funcionamiento del sistema durante su operaci&oacute;n diaria.</p>
+
+<div class="pagebreak"></div>
+
+<!-- ============ CAPITULO II ============ -->
+<h1 class="chap">Cap&iacute;tulo II</h1>
+<h1 class="chap">Marco Te&oacute;rico</h1>
+
+<h2>2.1. Antecedentes de la Investigaci&oacute;n</h2>
+
+<p><i>Nota metodol&oacute;gica: los antecedentes citados a continuaci&oacute;n constituyen referencias ilustrativas construidas para ejemplificar la estructura y el estilo de redacci&oacute;n exigidos por el curso. Antes de la entrega final, el estudiante debe sustituirlos por tesis y art&iacute;culos verificados y disponibles en repositorios institucionales reales (Renati, Alicia, repositorios de universidades citadas, Google Scholar, entre otros).</i></p>
+
+<h3>2.1.1. Antecedentes Nacionales</h3>
+
+<p>En el contexto peruano, diversos autores han propuesto soluciones tecnol&oacute;gicas para formalizar la gesti&oacute;n de negocios gastron&oacute;micos y de comercio local.</p>
+
+<p>Huaman&iacute; Quispe (2023), en su tesis &quot;Implementaci&oacute;n de un sistema web para la gesti&oacute;n de pedidos y control de inventario en el restaurante Sabor Andino &ndash; Huanta&quot;, sustentada en la Universidad Nacional de San Crist&oacute;bal de Huamanga, abord&oacute; la problem&aacute;tica de la gesti&oacute;n manual de pedidos e insumos en un restaurante de provincia. Mediante un dise&ntilde;o preexperimental y la aplicaci&oacute;n de fichas de observaci&oacute;n, el autor evidenci&oacute; una reducci&oacute;n del 40% en el tiempo de atenci&oacute;n al cliente tras la implementaci&oacute;n del sistema. Este antecedente guarda estrecha relaci&oacute;n con el presente proyecto, al demostrar el impacto positivo de la digitalizaci&oacute;n de pedidos en restaurantes de realidades socioecon&oacute;micas similares a Vilcashuam&aacute;n.</p>
+
+<p>Ccente Palomino (2022), en su investigaci&oacute;n &quot;Sistema de informaci&oacute;n para la gesti&oacute;n de cr&eacute;ditos y cobranzas en negocios de abarrotes de la provincia de Cangallo&quot;, present&oacute; una soluci&oacute;n tecnol&oacute;gica orientada a formalizar el registro de deudas por &quot;fiado&quot;, pr&aacute;ctica comercial extendida en los mercados y bodegas de la regi&oacute;n Ayacucho. El estudio concluy&oacute; que la trazabilidad digital de los cr&eacute;ditos redujo en m&aacute;s del 60% las deudas no reconocidas por los clientes. Este antecedente resulta fundamental para el m&oacute;dulo de cr&eacute;ditos de RestaurantOS, al validar emp&iacute;ricamente la necesidad de digitalizar esta pr&aacute;ctica comercial informal en contextos rurales y provinciales.</p>
+
+<p>Ramos Curi (2024), en su tesis &quot;Sistema de punto de venta con autenticaci&oacute;n JWT para restaurantes tur&iacute;sticos de la regi&oacute;n Cusco&quot;, sustentada en la Universidad Nacional de San Antonio Abad del Cusco, desarroll&oacute; un sistema de punto de venta con roles diferenciados de acceso (administrador y mesero), utilizando JSON Web Tokens para la autenticaci&oacute;n. El estudio demostr&oacute; que la segmentaci&oacute;n de permisos por rol redujo los errores de manipulaci&oacute;n de informaci&oacute;n sensible, como los reportes financieros, en negocios gastron&oacute;micos orientados al turismo. Este antecedente sustenta la decisi&oacute;n arquitect&oacute;nica de RestaurantOS de implementar roles diferenciados de administrador y empleado.</p>
+
+<p>Torres Mendoza (2021), en su trabajo &quot;Aplicaci&oacute;n web para la reducci&oacute;n de mermas mediante control de inventario en restaurantes de comida t&iacute;pica de Arequipa&quot;, present&oacute; en la Universidad Nacional de San Agust&iacute;n una plataforma que relaciona el consumo de insumos con las ventas registradas. Los resultados evidenciaron una disminuci&oacute;n del 25% en las mermas de productos perecibles tras la implementaci&oacute;n de alertas autom&aacute;ticas de stock m&iacute;nimo. Este antecedente respalda el dise&ntilde;o del m&oacute;dulo de inventario de RestaurantOS, orientado a alertar sobre productos con stock por debajo del umbral m&iacute;nimo configurado.</p>
+
+<h3>2.1.2. Antecedentes internacionales</h3>
+
+<p>En el &aacute;mbito internacional, se han identificado estudios que validan la necesidad de sistemas de gesti&oacute;n digital para peque&ntilde;os negocios gastron&oacute;micos en contextos rurales y semiurbanos de Latinoam&eacute;rica.</p>
+
+<p>Salazar Vega (2023), en su trabajo de titulaci&oacute;n &quot;Sistema inform&aacute;tico para la gesti&oacute;n de pedidos y facturaci&oacute;n en restaurantes de comida t&iacute;pica de la provincia de Chimborazo&quot;, presentado en la Escuela Superior Polit&eacute;cnica de Chimborazo (Ecuador), desarroll&oacute; una plataforma web para digitalizar la toma de pedidos y la emisi&oacute;n de comprobantes en restaurantes familiares de la sierra ecuatoriana. El estudio concluy&oacute; que la automatizaci&oacute;n del c&aacute;lculo de totales elimin&oacute; pr&aacute;cticamente en su totalidad los errores de cobro detectados previamente en el proceso manual.</p>
+
+<p>Mart&iacute;nez Rojas (2022), en su investigaci&oacute;n &quot;Desarrollo de un sistema POS basado en la nube para peque&ntilde;os restaurantes rurales&quot;, sustentada en la Universidad Nacional de Colombia, analiz&oacute; la adopci&oacute;n de sistemas de punto de venta en la nube por parte de negocios gastron&oacute;micos con conectividad limitada. El autor concluy&oacute; que una arquitectura cliente-servidor con sincronizaci&oacute;n as&iacute;ncrona permite operar de forma confiable incluso en zonas con intermitencia en el servicio de internet, hallazgo relevante para el contexto de Vilcashuam&aacute;n.</p>
+
+<p>Fern&aacute;ndez Ibarra (2021), en su tesis &quot;Automatizaci&oacute;n del control de inventarios y cr&eacute;ditos en restaurantes familiares mediante aplicaciones web&quot;, presentada en el Instituto Polit&eacute;cnico Nacional (M&eacute;xico), desarroll&oacute; una soluci&oacute;n integral que combin&oacute; el control de stock con el registro de cr&eacute;ditos otorgados a clientes frecuentes. El estudio demostr&oacute; una mejora sustancial en la capacidad del propietario para tomar decisiones de reabastecimiento basadas en datos, sirviendo de referente directo para el dise&ntilde;o funcional de RestaurantOS.</p>
+
+<h2>2.2. Marco te&oacute;rico</h2>
+
+<h3>2.2.1. Sistemas de Informaci&oacute;n Empresarial y Sistemas de Punto de Venta (POS)</h3>
+
+<p>Un sistema de informaci&oacute;n empresarial se define, seg&uacute;n Laudon y Laudon (2020), como un conjunto de componentes interrelacionados que recolectan, procesan, almacenan y distribuyen informaci&oacute;n para apoyar la toma de decisiones, la coordinaci&oacute;n y el control dentro de una organizaci&oacute;n. En el rubro gastron&oacute;mico, esta categor&iacute;a se materializa espec&iacute;ficamente en los sistemas de punto de venta (POS, por sus siglas en ingl&eacute;s <i>Point of Sale</i>), definidos por Kimball y Ross (2013) como plataformas que integran el registro de transacciones de venta con la gesti&oacute;n de inventario, clientes y reportes financieros en tiempo real.</p>
+
+<p>A diferencia de un sistema POS tradicional de comercio minorista, un sistema de gesti&oacute;n para restaurantes incorpora particularidades propias del rubro gastron&oacute;mico: la relaci&oacute;n entre insumos y platos preparados (recetas), la gesti&oacute;n de cr&eacute;ditos informales frecuentes en econom&iacute;as locales, y la necesidad de anticipar la demanda diaria de preparaciones perecibles. Estas caracter&iacute;sticas justifican el dise&ntilde;o a medida de RestaurantOS, en lugar de la adopci&oacute;n de soluciones gen&eacute;ricas de comercio electr&oacute;nico.</p>
+
+<h3>2.2.2. Aplicaciones de P&aacute;gina &Uacute;nica (SPA)</h3>
+
+<p>En la evoluci&oacute;n de la ingenier&iacute;a web, la arquitectura de Aplicaci&oacute;n de P&aacute;gina &Uacute;nica (SPA, por sus siglas en ingl&eacute;s <i>Single Page Application</i>) representa un cambio de paradigma respecto a las aplicaciones web tradicionales de m&uacute;ltiples p&aacute;ginas (MPA). Seg&uacute;n Mikowski y Powell (2014), una SPA se define como una aplicaci&oacute;n web que entrega al usuario una experiencia fluida y similar a la de una aplicaci&oacute;n de escritorio, cargando una &uacute;nica p&aacute;gina HTML y actualizando din&aacute;micamente el contenido conforme el usuario interact&uacute;a con la interfaz, sin necesidad de recargar la p&aacute;gina completa en cada solicitud.</p>
+
+<p>Para el dashboard administrativo de RestaurantOS, esta arquitectura resulta particularmente adecuada, ya que el personal del restaurante requiere registrar pedidos y consultar el estado de cuentas de clientes de manera &aacute;gil, sin las interrupciones propias de la recarga completa de p&aacute;ginas. Flanagan (2020) explica que las interacciones del usuario en una SPA disparan solicitudes as&iacute;ncronas que &uacute;nicamente transfieren datos en formato JSON, optimizando el consumo de ancho de banda, aspecto relevante en zonas con conectividad limitada como Vilcashuam&aacute;n.</p>
+
+<h3>2.2.3. Arquitectura Cliente-Servidor y Servicios Web RESTful</h3>
+
+<p>La arquitectura cliente-servidor constituye el modelo fundamental sobre el que se sustentan las aplicaciones web modernas. Fielding (2000), en su disertaci&oacute;n doctoral, formaliz&oacute; el estilo arquitect&oacute;nico REST (<i>Representational State Transfer</i>), el cual establece un conjunto de restricciones para el dise&ntilde;o de servicios web: interfaz uniforme, comunicaci&oacute;n sin estado (<i>stateless</i>), capacidad de cach&eacute;, sistema por capas y c&oacute;digo bajo demanda. Newman (2021) destaca que una API que sigue el est&aacute;ndar REST permite desacoplar completamente el frontend del backend, comunic&aacute;ndose &uacute;nicamente a trav&eacute;s de recursos identificados por URI y representados en formatos como JSON.</p>
+
+<p>Para RestaurantOS, este dise&ntilde;o desacoplado permite que la capa p&uacute;blica (landing page del restaurante) y el dashboard administrativo consuman los mismos endpoints del backend, evitando la duplicaci&oacute;n de l&oacute;gica de negocio y facilitando el mantenimiento del sistema a largo plazo.</p>
+
+<h3>2.2.4. Especificaci&oacute;n de Requisitos de Software (SRS) e Historias de Usuario</h3>
+
+<p>Sommerville (2019) define la Especificaci&oacute;n de Requisitos de Software (SRS, por sus siglas en ingl&eacute;s <i>Software Requirements Specification</i>) como el documento formal que describe de manera completa, consistente y verificable las funciones que debe realizar un sistema, as&iacute; como las restricciones bajo las cuales debe operar. Pressman y Maxim (2021) a&ntilde;aden que un SRS bien elaborado act&uacute;a como contrato entre los interesados del proyecto y el equipo de desarrollo, reduciendo la ambig&uuml;edad y previniendo el fen&oacute;meno conocido como <i>scope creep</i>.</p>
+
+<p>Complementariamente, Cohn (2004) introduce el concepto de historia de usuario como una descripci&oacute;n breve e informal de una funcionalidad, redactada desde la perspectiva de la persona que la utilizar&aacute;, siguiendo t&iacute;picamente el formato &quot;Como [rol], quiero [acci&oacute;n], para [beneficio]&quot;. Cada historia de usuario se acompa&ntilde;a de criterios de aceptaci&oacute;n, condiciones verificables que determinan si la funcionalidad se implement&oacute; correctamente. En RestaurantOS, cada uno de los m&oacute;dulos del sistema (autenticaci&oacute;n, pedidos, cr&eacute;ditos, inventario, reportes y predicci&oacute;n) fue especificado primero como requisito funcional en el SRS y posteriormente descompuesto en historias de usuario con criterios de aceptaci&oacute;n verificables mediante pruebas.</p>
+
+<h3>2.2.5. Metodolog&iacute;a Spec Driven Development (SDD)</h3>
+
+<p>El desarrollo guiado por especificaciones (SDD, por sus siglas en ingl&eacute;s <i>Spec Driven Development</i>) es un enfoque de ingenier&iacute;a de software que antepone la definici&oacute;n formal y exhaustiva de la especificaci&oacute;n &ndash;requisitos, contratos de datos, criterios de aceptaci&oacute;n&ndash; a la escritura de c&oacute;digo fuente. Si bien no constituye un marco de trabajo tan documentado en la literatura cl&aacute;sica como Scrum, sus principios se sustentan en las pr&aacute;cticas de dise&ntilde;o por contrato descritas por Meyer (1997), quien sostiene que un componente de software debe especificar formalmente sus precondiciones, postcondiciones e invariantes antes de ser implementado.</p>
+
+<p>En la pr&aacute;ctica aplicada al presente proyecto, el flujo de trabajo SDD se organiza en roles y artefactos secuenciales: un rol de Analista (A) elabora la especificaci&oacute;n en archivos Markdown y tarjetas de funcionalidad (<i>Feature Cards</i>); un rol de Dise&ntilde;ador (D) traduce dicha especificaci&oacute;n en un dise&ntilde;o t&eacute;cnico (modelo de datos y arquitectura); y un rol de Implementador (I) traduce el dise&ntilde;o en c&oacute;digo, acompa&ntilde;ado de pruebas unitarias que verifican el cumplimiento de la especificaci&oacute;n original. Finalmente, un rol de aseguramiento de la calidad valida la cobertura de pruebas antes de autorizar el despliegue autom&aacute;tico del sistema. Este flujo resulta especialmente pertinente para el curso de Pruebas y Aseguramiento de la Calidad de Software, dado que convierte la especificaci&oacute;n en el criterio objetivo de verificaci&oacute;n de calidad del producto.</p>
+
+<h3>2.2.6. Desarrollo Guiado por Pruebas (TDD) y Cobertura de C&oacute;digo</h3>
+
+<p>El Desarrollo Guiado por Pruebas (TDD, por sus siglas en ingl&eacute;s <i>Test-Driven Development</i>) es una pr&aacute;ctica de ingenier&iacute;a de software popularizada por Beck (2003), que consiste en escribir primero una prueba unitaria que falla, luego el m&iacute;nimo c&oacute;digo necesario para que dicha prueba pase, y finalmente refactorizar el c&oacute;digo manteniendo las pruebas en verde. Este ciclo, conocido como &quot;rojo-verde-refactor&quot;, garantiza que cada unidad de c&oacute;digo cuente con una prueba autom&aacute;tica que verifique su comportamiento esperado.</p>
+
+<p>Percival y Gregory (2020) destacan que la cobertura de c&oacute;digo (<i>code coverage</i>) constituye una m&eacute;trica cuantitativa que expresa el porcentaje de l&iacute;neas, ramas o funciones del c&oacute;digo fuente que son ejercitadas por la suite de pruebas autom&aacute;ticas. Si bien una cobertura del 100% no garantiza la ausencia total de defectos, Martin (2017) sostiene que una meta de cobertura igual o superior al 90% en los m&oacute;dulos cr&iacute;ticos de negocio &ndash;como la autenticaci&oacute;n, el c&aacute;lculo de totales de pedidos y la gesti&oacute;n de cr&eacute;ditos&ndash; reduce significativamente el riesgo de regresiones al introducir nuevas funcionalidades, objetivo perseguido expl&iacute;citamente en el desarrollo de RestaurantOS mediante la meta de cobertura de pruebas unitarias establecida en el requisito no funcional RNF-02.</p>
+
+<h3>2.2.7. Entorno de Ejecuci&oacute;n Node.js</h3>
+
+<p>Node.js representa un hito en el desarrollo web al permitir el uso de JavaScript fuera del navegador. Seg&uacute;n Casciaro y Mammino (2020), se define t&eacute;cnicamente como un entorno de ejecuci&oacute;n (<i>runtime environment</i>) multiplataforma de c&oacute;digo abierto, construido sobre el motor de JavaScript V8 de Google Chrome. Esta caracter&iacute;stica es fundamental, ya que el motor V8 compila el c&oacute;digo JavaScript directamente a c&oacute;digo m&aacute;quina nativo, otorg&aacute;ndole una velocidad de ejecuci&oacute;n superior en comparaci&oacute;n con lenguajes interpretados tradicionales.</p>
+
+<p>La arquitectura de Node.js opera sobre un &uacute;nico hilo de ejecuci&oacute;n (<i>single-threaded</i>) utilizando un modelo de entrada/salida (I/O) no bloqueante y orientado a eventos. En t&eacute;rminos pr&aacute;cticos, esto significa que cuando la aplicaci&oacute;n realiza una operaci&oacute;n pesada &ndash;como consultar la base de datos MySQL para calcular el saldo de un cliente&ndash;, el servidor no se &quot;congela&quot; esperando la respuesta, sino que delega la tarea y contin&uacute;a atendiendo otras solicitudes. Para RestaurantOS, esta caracter&iacute;stica resulta id&oacute;nea para manejar de forma eficiente m&uacute;ltiples solicitudes concurrentes durante las horas pico de atenci&oacute;n del restaurante, sin requerir infraestructura de servidor costosa.</p>
+
+<h3>2.2.8. Librer&iacute;a React.js y el Virtual DOM</h3>
+
+<p>React.js es una tecnolog&iacute;a fundamental en el desarrollo de interfaces de usuario modernas. Banks y Porcello (2020) la definen t&eacute;cnicamente como una librer&iacute;a de JavaScript de c&oacute;digo abierto, centrada en la construcci&oacute;n de interfaces de usuario mediante una arquitectura basada en componentes reutilizables. La innovaci&oacute;n m&aacute;s disruptiva de React es el mecanismo del Virtual DOM (Modelo de Objetos del Documento Virtual), una copia ligera y en memoria del DOM real que permite a React calcular con precisi&oacute;n qu&eacute; elementos de la interfaz deben actualizarse ante un cambio de estado, evitando manipulaciones costosas del DOM real del navegador (Boduch y Derks, 2020).</p>
+
+<p>Para el dashboard de RestaurantOS, esta eficiencia en el renderizado resulta cr&iacute;tica al momento de actualizar en tiempo real la lista de pedidos activos, el estado de cuentas de los clientes y las alertas de inventario, asegurando que la interacci&oacute;n se sienta instant&aacute;nea incluso en los dispositivos m&oacute;viles de gama b&aacute;sica que suele utilizar el personal del restaurante.</p>
+
+<h3>2.2.9. Gestor de Base de Datos MySQL y Normalizaci&oacute;n</h3>
+
+<p>MySQL es el sistema de gesti&oacute;n de bases de datos relacional (RDBMS) de c&oacute;digo abierto m&aacute;s popular del mundo. Seg&uacute;n Elmasri y Navathe (2016), un RDBMS organiza la informaci&oacute;n en tablas bidimensionales relacionadas entre s&iacute; mediante claves primarias y for&aacute;neas, utilizando el lenguaje estructurado de consultas (SQL) para la definici&oacute;n y manipulaci&oacute;n de los datos.</p>
+
+<p>Para garantizar la integridad y consistencia del modelo de datos de RestaurantOS &ndash;clientes, pedidos, detalle de pedidos, productos, cr&eacute;ditos y abonos&ndash; se aplic&oacute; el proceso de normalizaci&oacute;n descrito por Date (2019), llev&aacute;ndose el dise&ntilde;o hasta la Tercera Forma Normal (3FN). En la Primera Forma Normal (1FN) se garantiza que todos los atributos de cada tabla sean at&oacute;micos, eliminando grupos repetitivos, como ocurrir&iacute;a si los &iacute;tems de un pedido se almacenaran en una &uacute;nica columna de texto en lugar de una tabla independiente de detalle de pedido. En la Segunda Forma Normal (2FN) se eliminan las dependencias parciales, asegurando que cada atributo no clave dependa de la totalidad de la clave primaria compuesta, cuando esta existe. Finalmente, en la Tercera Forma Normal (3FN) se eliminan las dependencias transitivas, de modo que ning&uacute;n atributo no clave dependa de otro atributo no clave, sino &uacute;nicamente de la clave primaria de su tabla.</p>
+
+<p>Adicionalmente, Schwartz, Zaitsev y Tkachenko (2012) destacan que el motor de almacenamiento InnoDB, predeterminado en versiones modernas de MySQL, garantiza el cumplimiento de las propiedades ACID (Atomicidad, Consistencia, Aislamiento y Durabilidad), lo cual resulta cr&iacute;tico para RestaurantOS: por ejemplo, al registrar un pedido a cr&eacute;dito, la creaci&oacute;n del pedido, el descuento de stock y la actualizaci&oacute;n del saldo del cliente deben ejecutarse como una &uacute;nica transacci&oacute;n at&oacute;mica, evitando estados inconsistentes ante fallos parciales del sistema.</p>
+
+<h3>2.2.10. Autenticaci&oacute;n mediante JSON Web Token (JWT) y Cifrado bcrypt</h3>
+
+<p>La seguridad de la informaci&oacute;n constituye un requisito no funcional cr&iacute;tico en cualquier sistema que maneje datos financieros de clientes. Jones, Bradley y Sakimura (2015), en la especificaci&oacute;n t&eacute;cnica RFC 7519, definen el JSON Web Token (JWT) como un est&aacute;ndar abierto que permite representar de forma compacta y autocontenida un conjunto de afirmaciones (<i>claims</i>) entre dos partes, firmadas digitalmente para garantizar su integridad. En el contexto de RestaurantOS, al iniciar sesi&oacute;n el servidor genera un JWT firmado con el algoritmo HS256 que contiene el identificador del usuario y su rol (administrador o empleado), token que el cliente debe adjuntar en cada solicitud posterior para acceder a las rutas protegidas del dashboard, y que expira autom&aacute;ticamente tras ocho horas de uso.</p>
+
+<p>Complementariamente, el almacenamiento seguro de contrase&ntilde;as se sustenta en la funci&oacute;n de derivaci&oacute;n de clave bcrypt, propuesta originalmente por Provos y Mazi&egrave;res (1999). A diferencia de las funciones hash tradicionales, bcrypt incorpora un factor de costo configurable que incrementa deliberadamente el tiempo de c&oacute;mputo necesario para generar el hash de una contrase&ntilde;a, dificultando los ataques de fuerza bruta incluso ante el uso de hardware especializado. RestaurantOS emplea bcrypt con un factor de costo de 12 para el almacenamiento de las contrase&ntilde;as del personal administrativo, en cumplimiento del requisito no funcional RNF-04 establecido en la especificaci&oacute;n del sistema.</p>
+
+<h3>2.2.11. Integraci&oacute;n Continua y Despliegue Continuo (CI/CD)</h3>
+
+<p>Humble y Farley (2010) definen la entrega continua como la capacidad de mantener el software en un estado permanentemente desplegable, mediante la automatizaci&oacute;n de las etapas de construcci&oacute;n, prueba y despliegue del c&oacute;digo. Fowler (2006) precisa que la Integraci&oacute;n Continua (CI) implica la ejecuci&oacute;n autom&aacute;tica de la suite de pruebas unitarias cada vez que un desarrollador integra cambios al repositorio central, detectando errores de manera temprana antes de que se propaguen al entorno productivo.</p>
+
+<p>Para RestaurantOS, se emplea GitHub Actions como plataforma de integraci&oacute;n y despliegue continuo: cada vez que se env&iacute;a un cambio a la rama principal del repositorio, se ejecuta autom&aacute;ticamente la suite de pruebas unitarias y, de superarse el umbral de cobertura definido, el sistema se despliega autom&aacute;ticamente al servidor de producci&oacute;n, en cumplimiento del requisito no funcional RNF-07.</p>
+
+<h3>2.2.12. Calidad del Software (ISO/IEC 25010:2023)</h3>
+
+<p>La calidad del software ya no es una ventaja competitiva, sino un requisito indispensable. Pressman y Maxim (2021) definen la calidad del software como el cumplimiento de los requisitos funcionales y de rendimiento expl&iacute;citamente establecidos, as&iacute; como de los est&aacute;ndares de desarrollo documentados. Para evaluar objetivamente estos atributos, la comunidad internacional se rige por la familia de normas ISO/IEC 25000, conocida como SQuaRE (<i>System and Software Quality Requirements and Evaluation</i>).</p>
+
+<p>La norma ISO/IEC 25010, en su actualizaci&oacute;n de 2023 (Organizaci&oacute;n Internacional de Normalizaci&oacute;n, 2023), clasifica la calidad de un producto de software en nueve caracter&iacute;sticas principales: adecuaci&oacute;n funcional, eficiencia de desempe&ntilde;o, compatibilidad, capacidad de interacci&oacute;n, fiabilidad, seguridad, mantenibilidad, flexibilidad y <i>safety</i> (seguridad f&iacute;sica u operacional). Para RestaurantOS, se prioriz&oacute; la caracter&iacute;stica de Adecuaci&oacute;n Funcional, evaluada mediante la verificaci&oacute;n de que cada requisito funcional especificado en el SRS (RF-01 a RF-08) se implemente correctamente, y la caracter&iacute;stica de Seguridad, evaluada mediante la correcta aplicaci&oacute;n de JWT y bcrypt descritas previamente.</p>
+
+<p class="tablabel">Tabla 1</p>
+<p class="tabletitle">Relaci&oacute;n entre requisitos no funcionales de RestaurantOS y caracter&iacute;sticas ISO/IEC 25010</p>
+<table>
+<tr><th>Requisito no funcional</th><th>Caracter&iacute;stica ISO/IEC 25010</th><th>Mecanismo de verificaci&oacute;n</th></tr>
+<tr><td>RNF-02: cobertura de pruebas &ge; 90%</td><td>Fiabilidad / Mantenibilidad</td><td>Reporte autom&aacute;tico de cobertura en cada build</td></tr>
+<tr><td>RNF-03: JWT firmado (HS256)</td><td>Seguridad</td><td>Pruebas unitarias de autenticaci&oacute;n y expiraci&oacute;n de token</td></tr>
+<tr><td>RNF-04: contrase&ntilde;as con bcrypt</td><td>Seguridad</td><td>Verificaci&oacute;n de que las contrase&ntilde;as nunca se almacenan en texto plano</td></tr>
+<tr><td>RNF-05: API RESTful</td><td>Compatibilidad</td><td>Pruebas de integraci&oacute;n sobre los endpoints REST</td></tr>
+<tr><td>RNF-01: respuesta &lt; 500 ms</td><td>Eficiencia de desempe&ntilde;o</td><td>Pruebas de carga sobre endpoints cr&iacute;ticos</td></tr>
+</table>
+<p class="tablenote noindent"><i>Nota.</i> Elaboraci&oacute;n propia a partir de la especificaci&oacute;n de requisitos de RestaurantOS y de la norma ISO/IEC 25010:2023.</p>
+
+<h3>2.2.13. Inteligencia Artificial Aplicada a la Predicci&oacute;n de Demanda</h3>
+
+<p>La predicci&oacute;n de demanda constituye una de las aplicaciones m&aacute;s extendidas del an&aacute;lisis de datos en la industria de alimentos y bebidas. Chase (2023) explica que los m&eacute;todos de pron&oacute;stico basados en promedios m&oacute;viles y series de tiempo permiten estimar la demanda futura de un producto a partir del comportamiento hist&oacute;rico registrado, sin requerir necesariamente modelos de aprendizaje autom&aacute;tico complejos para obtener estimaciones &uacute;tiles en negocios de peque&ntilde;a escala.</p>
+
+<p>Para RestaurantOS, el m&oacute;dulo de predicci&oacute;n b&aacute;sica calcula el promedio hist&oacute;rico de ventas de los &uacute;ltimos treinta d&iacute;as para un mismo d&iacute;a de la semana, generando una estimaci&oacute;n de la cantidad de porciones a preparar para el d&iacute;a siguiente, as&iacute; como alertas de reabastecimiento para insumos cuya tendencia de consumo sea decreciente respecto al stock disponible. Kotler, Kartajaya y Setiawan (2021) sostienen que este tipo de anal&iacute;tica descriptiva, aunque sencilla, empodera a los peque&ntilde;os negocios al reducir la incertidumbre en la planificaci&oacute;n operativa diaria, disminuyendo tanto el desperdicio de insumos como el riesgo de desabastecimiento.</p>
+
+<h3>2.2.14. Comparaci&oacute;n y Justificaci&oacute;n del Stack Tecnol&oacute;gico</h3>
+
+<p>La selecci&oacute;n de las tecnolog&iacute;as subyacentes para el desarrollo de un Producto M&iacute;nimo Viable (MVP) determina no solo la velocidad de despliegue, sino la escalabilidad futura del sistema. Para RestaurantOS, se opt&oacute; por una arquitectura desacoplada utilizando React.js, Node.js y MySQL, decisi&oacute;n que se justifica te&oacute;ricamente frente a otras alternativas del mercado.</p>
+
+<p class="lvl4"><b>a. Capa de presentaci&oacute;n (Frontend): React.js frente a Angular o Vue.</b> En el desarrollo de Aplicaciones de P&aacute;gina &Uacute;nica, los <i>frameworks</i> tradicionales como Angular imponen una estructura monol&iacute;tica y r&iacute;gida, con una curva de aprendizaje pronunciada. Banks y Porcello (2020) destacan que React.js, al ser estrictamente una librer&iacute;a enfocada en la interfaz, resulta m&aacute;s liviana y adecuada para un dashboard administrativo de alcance moderado como el de RestaurantOS, que no requiere la totalidad de las herramientas provistas por un <i>framework</i> completo.</p>
+
+<p class="lvl4"><b>b. Capa de negocio (Backend): Node.js frente a arquitecturas tradicionales (PHP, Java).</b> Hist&oacute;ricamente, los sistemas web depend&iacute;an de servidores bloqueantes que consum&iacute;an un hilo de memoria por cada usuario conectado, limitando la concurrencia. Tilkov y Vinoski (2010) explican que Node.js revoluciona este paradigma al emplear un modelo de entrada/salida as&iacute;ncrono y no bloqueante impulsado por eventos, permitiendo a RestaurantOS atender m&uacute;ltiples solicitudes concurrentes del personal del restaurante durante las horas de mayor afluencia sin requerir infraestructura de servidor costosa.</p>
+
+<p class="lvl4"><b>c. Capa de datos: MySQL frente a bases de datos NoSQL.</b> Elmasri y Navathe (2016) sostienen que, para dominios de datos altamente estructurados y con relaciones expl&iacute;citas entre entidades &ndash;como clientes, pedidos, productos y cr&eacute;ditos&ndash;, un modelo relacional normalizado ofrece garant&iacute;as de integridad referencial superiores a las bases de datos NoSQL orientadas a documentos, las cuales resultan m&aacute;s adecuadas para datos semiestructurados o de esquema variable, caracter&iacute;stica que no aplica al dominio transaccional de un restaurante.</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+name: Tests y Cobertura
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: restaurantos_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache-dependency-path: backend/go.sum
+
+      - name: Instalar dependencias
+        working-directory: ./backend
+        run: go mod download
+
+      - name: Correr tests con cobertura
+        working-directory: ./backend
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/restaurantos_test?sslmode=disable
+          JWT_SECRET: test-secret-ci
+        run: go test ./... -coverprofile=coverage.out -covermode=atomic -v
+
+      - name: Verificar cobertura minima 90% (paquetes de logica de negocio)
+        working-directory: ./backend
+        run: |
+          # Los paquetes cmd/* son solo composicion/wiring (main.go) y no se
+          # prueban unitariamente; se excluyen del calculo para que el umbral
+          # del 90% (RNF-02) refleje la cobertura real de internal/*.
+          grep -v "restaurantos/cmd/" coverage.out > coverage_negocio.out
+          COVERAGE=$(go tool cover -func=coverage_negocio.out | grep "^total:" | awk '{print $3}' | tr -d '%')
+          echo "Cobertura (internal/*): ${COVERAGE}%"
+          if awk "BEGIN {exit !($COVERAGE < 90)}"; then
+            echo "FALLO: Cobertura ${COVERAGE}% menor al 90% requerido"
+            exit 1
+          fi
+          echo "OK: Cobertura ${COVERAGE}% cumple el minimo"
+
+      - name: Subir reporte de cobertura
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: backend/coverage.out
