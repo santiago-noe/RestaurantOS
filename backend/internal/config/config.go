@@ -9,6 +9,7 @@ type Config struct {
 	JWTSecret   string
 	Port        string
 	Env         string
+	CORSOrigin  string
 }
 
 func Load() *Config {
@@ -17,6 +18,7 @@ func Load() *Config {
 		JWTSecret:   getEnv("JWT_SECRET", "dev-secret-cambiar-en-produccion"),
 		Port:        getEnv("PORT", "8080"),
 		Env:         getEnv("ENV", "development"),
+		CORSOrigin:  getEnv("CORS_ORIGIN", "*"),
 	}
 }
 

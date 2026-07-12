@@ -19,6 +19,7 @@ func main() {
 	database.Migrate(db)
 
 	r := gin.Default()
+	r.Use(middleware.CORSMiddleware(cfg.CORSOrigin))
 
 	// ─── Rutas públicas ────────────────────────────────────────────────────────
 	r.GET("/health", func(c *gin.Context) {
