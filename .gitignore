@@ -20,3 +20,7 @@ Thumbs.db
 
 # Archivos temporales de Office
 ~$*
+
+# Capitulos del informe/tesis (fuera del repo de codigo)
+RestaurantOS_Capitulos_*
+RestaurantOS_Capitulos_*_archivos/
