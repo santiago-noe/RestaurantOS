@@ -138,7 +138,7 @@ export default function DashboardLayout() {
       )}
 
       {/* CONTENIDO PRINCIPAL */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', marginLeft: 'calc(280px + 0px)', transition: 'margin-left 0.3s ease' }} className="lg:ml-0">
+      <div id="dashboard-content" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', transition: 'margin-left 0.3s ease' }}>
 
         {/* Header móvil */}
         <header style={{
@@ -162,12 +162,12 @@ export default function DashboardLayout() {
       </div>
 
       <style>{`
-        #sidebar {
-          transform: translateX(0) !important;
+        @media (min-width: 1024px) {
+          #sidebar { transform: translateX(0) !important; }
+          #dashboard-content { margin-left: 280px; }
+          header { display: none !important; }
         }
-        @media (max-width: 1024px) {
-          #sidebar { transform: ${open ? 'translateX(0)' : 'translateX(-100%)'}; }
-          div[style*="display: flex"][style*="overflow: hidden"] { margin-left: 0; }
+        @media (max-width: 1023.98px) {
           header { display: flex; }
         }
         ::-webkit-scrollbar { width: 8px; }
