@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { clientesApi } from '../../services/api';
 import type { Cliente } from '../../types';
 import { useAuth } from '../../context/AuthContext';
-import { Plus, Search, Building2, User, X, Phone, Mail, Briefcase, UserCircle } from 'lucide-react';
+import { Plus, Search, Building2, User, X, Phone, Mail, UserCircle } from 'lucide-react';
 
 // Paleta profesional consistente con el dashboard
 const C = {

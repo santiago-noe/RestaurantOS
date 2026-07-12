@@ -2,7 +2,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import {
   LayoutDashboard, Users, ShoppingBag, Package,
-  CreditCard, Brain, LogOut, Menu, X, ChevronRight, UtensilsCrossed, FileBarChart, CalendarClock
+  CreditCard, Brain, LogOut, Menu, X, UtensilsCrossed, FileBarChart, CalendarClock
 } from 'lucide-react'
 import { useState } from 'react'
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { creditosApi } from '../../services/api';
 import type { Cliente } from '../../types';
-import { CreditCard, DollarSign, Eye, Receipt, TrendingUp, Calendar, CheckCircle } from 'lucide-react';
+import { CreditCard, DollarSign, Eye, Receipt, TrendingUp } from 'lucide-react';
 
 // Paleta profesional consistente
 const C = {
