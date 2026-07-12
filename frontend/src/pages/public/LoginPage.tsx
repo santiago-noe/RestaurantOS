@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
+import {
+  Eye, EyeOff, Mail, Lock, LogIn, ArrowLeft, ShieldCheck, AlertCircle,
+  User, Users, ShoppingBag, Package, CreditCard, BarChart3, Brain, Flower2, Loader2,
+} from 'lucide-react'
 
 const C = {
   bg:         '#fcf9f3',
@@ -79,7 +83,7 @@ export default function LoginPage() {
               borderRadius: 6, padding: '6px 14px',
               fontFamily: 'Manrope', fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', color: C.gold,
             }}>
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>admin_panel_settings</span>
+              <ShieldCheck size={16} />
               PANEL ADMINISTRATIVO
             </div>
             <h2 style={{ fontFamily: 'Libre Caslon Text, serif', fontSize: 36, fontWeight: 700, lineHeight: 1.2, marginBottom: 16 }}>
@@ -91,14 +95,16 @@ export default function LoginPage() {
 
             {/* Módulos disponibles */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 28 }}>
-              {[
-                ['people','Clientes'],['shopping_bag','Pedidos'],
-                ['inventory','Inventario'],['credit_card','Créditos'],
-                ['bar_chart','Reportes'],['psychology','IA'],
-              ].map(([icon, label]) => (
-                <div key={label as string} style={{ display: 'flex', alignItems: 'center', gap: 8, backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 8, padding: '8px 12px' }}>
-                  <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 18 }}>{icon as string}</span>
-                  <span style={{ fontFamily: 'Manrope', fontSize: 13, fontWeight: 600 }}>{label as string}</span>
+              {(
+                [
+                  [Users,'Clientes'],[ShoppingBag,'Pedidos'],
+                  [Package,'Inventario'],[CreditCard,'Créditos'],
+                  [BarChart3,'Reportes'],[Brain,'IA'],
+                ] as [React.ComponentType<{ size?: number; color?: string }>, string][]
+              ).map(([Icon, label]) => (
+                <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 8, backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 8, padding: '8px 12px' }}>
+                  <Icon color={C.gold} size={18} />
+                  <span style={{ fontFamily: 'Manrope', fontSize: 13, fontWeight: 600 }}>{label}</span>
                 </div>
               ))}
             </div>
@@ -138,7 +144,7 @@ export default function LoginPage() {
             {/* Divider */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20 }}>
               <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
-              <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 18 }}>filter_vintage</span>
+              <Flower2 color={C.gold} size={18} />
               <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
             </div>
           </div>
@@ -150,7 +156,7 @@ export default function LoginPage() {
               backgroundColor: '#fff0f0', border: `1px solid ${C.error}30`,
               borderRadius: 8, padding: '12px 16px', marginBottom: 24,
             }}>
-              <span className="material-symbols-outlined" style={{ color: C.error, fontSize: 18, flexShrink: 0 }}>error</span>
+              <AlertCircle color={C.error} size={18} style={{ flexShrink: 0 }} />
               <p style={{ fontFamily: 'Manrope', fontSize: 14, color: C.error, margin: 0 }}>{error}</p>
             </div>
           )}
@@ -166,10 +172,10 @@ export default function LoginPage() {
                 Correo electrónico
               </label>
               <div style={{ position: 'relative' }}>
-                <span className="material-symbols-outlined" style={{
+                <Mail size={18} style={{
                   position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)',
-                  color: focused === 'email' ? C.primary : C.outline, fontSize: 18, pointerEvents: 'none',
-                }}>mail</span>
+                  color: focused === 'email' ? C.primary : C.outline, pointerEvents: 'none',
+                }} />
                 <input required type="email" placeholder="admin@restaurante.com"
                   value={form.email}
                   onChange={e => setForm(p => ({ ...p, email: e.target.value }))}
@@ -190,10 +196,10 @@ export default function LoginPage() {
                 </label>
               </div>
               <div style={{ position: 'relative' }}>
-                <span className="material-symbols-outlined" style={{
+                <Lock size={18} style={{
                   position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)',
-                  color: focused === 'password' ? C.primary : C.outline, fontSize: 18, pointerEvents: 'none',
-                }}>lock</span>
+                  color: focused === 'password' ? C.primary : C.outline, pointerEvents: 'none',
+                }} />
                 <input required type={showPwd ? 'text' : 'password'} placeholder="••••••••"
                   value={form.password}
                   onChange={e => setForm(p => ({ ...p, password: e.target.value }))}
@@ -206,9 +212,7 @@ export default function LoginPage() {
                     background: 'none', border: 'none', cursor: 'pointer',
                     color: C.outline, padding: 0, display: 'flex',
                   }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
-                    {showPwd ? 'visibility_off' : 'visibility'}
-                  </span>
+                  {showPwd ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </div>
             </div>
@@ -228,12 +232,12 @@ export default function LoginPage() {
               onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)' }}>
               {loading ? (
                 <>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18, animation: 'spin 1s linear infinite' }}>progress_activity</span>
+                  <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} />
                   Verificando...
                 </>
               ) : (
                 <>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>login</span>
+                  <LogIn size={18} />
                   Ingresar al Panel
                 </>
               )}
@@ -266,9 +270,9 @@ export default function LoginPage() {
                   onMouseEnter={e => (e.currentTarget.style.borderColor = C.primary)}
                   onMouseLeave={e => (e.currentTarget.style.borderColor = C.outlineVar)}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 16, color: C.secondary }}>
-                      {rol === 'Admin' ? 'admin_panel_settings' : 'person'}
-                    </span>
+                    {rol === 'Admin'
+                      ? <ShieldCheck size={16} color={C.secondary} />
+                      : <User size={16} color={C.secondary} />}
                     <span style={{ fontSize: 13, fontWeight: 600, color: C.onSurface }}>{rol as string}</span>
                   </div>
                   <span style={{ fontSize: 12, color: C.outline }}>{email as string}</span>
@@ -286,7 +290,7 @@ export default function LoginPage() {
             }}
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = C.primary)}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = C.outline)}>
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_back</span>
+              <ArrowLeft size={16} />
               Volver a la página del restaurante
             </Link>
           </div>

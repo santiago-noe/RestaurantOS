@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { reservasApi } from '../../services/api'
+import {
+  ArrowLeft, MessageCircle, MapPin, Wine, Compass, Camera, CheckCircle2,
+  Check, CalendarCheck, Wallet, Flower2, Loader2,
+} from 'lucide-react'
 
 const C = {
   bg:          '#fcf9f3',
@@ -94,7 +98,7 @@ export default function ReservaPage() {
           }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = C.primary)}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = C.outline)}>
-            <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_back</span>
+            <ArrowLeft size={18} />
             Volver
           </Link>
 
@@ -113,7 +117,7 @@ export default function ReservaPage() {
               color: '#2e7d32', textDecoration: 'none',
               fontFamily: 'Manrope', fontSize: 13, fontWeight: 600,
             }}>
-            <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat_bubble</span>
+            <MessageCircle size={18} />
             <span className="hidden sm:inline">WhatsApp</span>
           </a>
         </div>
@@ -155,15 +159,17 @@ export default function ReservaPage() {
 
               {/* Lo que incluye */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {[
-                  ['Vista panorámica al Ushnu Inca', 'location_on'],
-                  ['Bienvenida con chicha artesanal', 'local_bar'],
-                  ['Tour privado con guía experto', 'explore'],
-                  ['Sesión fotográfica al atardecer', 'photo_camera'],
-                ].map(([texto, icon]) => (
-                  <div key={texto as string} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 18, flexShrink: 0 }}>{icon as string}</span>
-                    <span style={{ fontFamily: 'Manrope', fontSize: 14 }}>{texto as string}</span>
+                {(
+                  [
+                    ['Vista panorámica al Ushnu Inca', MapPin],
+                    ['Bienvenida con chicha artesanal', Wine],
+                    ['Tour privado con guía experto', Compass],
+                    ['Sesión fotográfica al atardecer', Camera],
+                  ] as [string, React.ComponentType<{ size?: number; color?: string; style?: React.CSSProperties }>][]
+                ).map(([texto, Icon]) => (
+                  <div key={texto} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <Icon color={C.gold} size={18} style={{ flexShrink: 0 }} />
+                    <span style={{ fontFamily: 'Manrope', fontSize: 14 }}>{texto}</span>
                   </div>
                 ))}
               </div>
@@ -194,7 +200,7 @@ export default function ReservaPage() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 24px',
                 }}>
-                  <span className="material-symbols-outlined" style={{ color: C.primary, fontSize: 32 }}>check_circle</span>
+                  <CheckCircle2 color={C.primary} size={32} />
                 </div>
                 <h2 style={{ fontFamily: 'Libre Caslon Text, serif', fontSize: 28, fontWeight: 700, color: C.primary, marginBottom: 12 }}>
                   ¡Solicitud recibida!
@@ -209,11 +215,14 @@ export default function ReservaPage() {
 
                 {/* Garantías */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 32 }}>
-                  {[['check','Confirmación','en 2h'],['event_available','Cancelación','gratis 24h'],['payments','Sin cobro','anticipado']].map(([icon,t,s]) => (
-                    <div key={t as string} style={{ border: `1px solid ${C.outlineVar}`, borderRadius: 8, padding: '12px 8px', textAlign: 'center' }}>
-                      <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 20 }}>{icon as string}</span>
-                      <p style={{ fontFamily: 'Manrope', fontSize: 12, fontWeight: 700, color: C.onSurface, marginTop: 4 }}>{t as string}</p>
-                      <p style={{ fontFamily: 'Manrope', fontSize: 11, color: C.outline }}>{s as string}</p>
+                  {(
+                    [[Check,'Confirmación','en 2h'],[CalendarCheck,'Cancelación','gratis 24h'],[Wallet,'Sin cobro','anticipado']] as
+                    [React.ComponentType<{ size?: number; color?: string }>, string, string][]
+                  ).map(([Icon,t,s]) => (
+                    <div key={t} style={{ border: `1px solid ${C.outlineVar}`, borderRadius: 8, padding: '12px 8px', textAlign: 'center' }}>
+                      <Icon color={C.gold} size={20} />
+                      <p style={{ fontFamily: 'Manrope', fontSize: 12, fontWeight: 700, color: C.onSurface, marginTop: 4 }}>{t}</p>
+                      <p style={{ fontFamily: 'Manrope', fontSize: 11, color: C.outline }}>{s}</p>
                     </div>
                   ))}
                 </div>
@@ -229,7 +238,7 @@ export default function ReservaPage() {
                       padding: '14px', fontFamily: 'Manrope', fontWeight: 700, fontSize: 15,
                       textDecoration: 'none', transition: 'opacity 0.2s',
                     }}>
-                    <span className="material-symbols-outlined">chat_bubble</span>
+                    <MessageCircle />
                     Confirmar por WhatsApp
                   </a>
                   <Link to="/" style={{
@@ -261,7 +270,7 @@ export default function ReservaPage() {
                   {/* Divider ornamental */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20 }}>
                     <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
-                    <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 20 }}>filter_vintage</span>
+                    <Flower2 color={C.gold} size={20} />
                     <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
                   </div>
                 </div>
@@ -362,12 +371,12 @@ export default function ReservaPage() {
                       onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)' }}>
                       {loading ? (
                         <>
-                          <span className="material-symbols-outlined" style={{ fontSize: 18, animation: 'spin 1s linear infinite' }}>progress_activity</span>
+                          <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} />
                           Enviando...
                         </>
                       ) : (
                         <>
-                          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>event_available</span>
+                          <CalendarCheck size={18} />
                           Confirmar Reserva
                         </>
                       )}
@@ -384,7 +393,7 @@ export default function ReservaPage() {
                         fontFamily: 'Manrope', fontWeight: 700, fontSize: 14,
                         textDecoration: 'none', transition: 'background 0.2s',
                       }}>
-                      <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat_bubble</span>
+                      <MessageCircle size={20} />
                       Reservar por WhatsApp
                     </a>
                   </div>

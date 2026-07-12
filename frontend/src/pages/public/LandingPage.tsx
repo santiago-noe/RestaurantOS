@@ -2,6 +2,10 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { menuApi } from '../../services/api'
 import type { MenuPublico } from '../../types'
+import {
+  X, Menu as MenuIcon, ChevronDown, Flower2, Map, Languages, Luggage,
+  Route, MapPin, Clock, ArrowRight, Phone, Mail, MessageCircle, Star, Globe, Camera,
+} from 'lucide-react'
 
 // ─── Paleta tomada directamente del Stitch ───────────────────────────────────
 const C = {
@@ -191,7 +195,7 @@ export default function LandingPage() {
             <Link to="/login" style={{ fontSize: 12, color: C.outline, textDecoration: 'none' }}>Admin</Link>
             <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}
               style={{ background: 'none', border: 'none', cursor: 'pointer', color: C.onSurface }}>
-              <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
+              {menuOpen ? <X /> : <MenuIcon />}
             </button>
           </div>
         </div>
@@ -256,7 +260,7 @@ export default function LandingPage() {
 
         {/* Scroll indicator */}
         <div style={{ position: 'absolute', bottom: 24, left: '50%', transform: 'translateX(-50%)', zIndex: 2, animation: 'bounce 2s infinite' }}>
-          <span className="material-symbols-outlined" style={{ color: '#fff', fontSize: 40 }}>expand_more</span>
+          <ChevronDown color="#fff" size={40} />
         </div>
       </section>
 
@@ -284,7 +288,7 @@ export default function LandingPage() {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', margin: '28px 0', gap: 16 }}>
               <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
-              <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 28 }}>filter_vintage</span>
+              <Flower2 color={C.gold} size={28} />
               <div style={{ flex: 1, height: 1, backgroundColor: C.outlineVar }} />
             </div>
           </Reveal>
@@ -409,12 +413,12 @@ export default function LandingPage() {
               Diseñamos experiencias completas para viajeros que buscan profundidad. Paquetes que incluyen recorridos privados por el Ushnu con guías expertos, seguidos de una cata de chicha de jora premium y nuestro menú degustación.
             </p>
             {[
-              { icon: 'map', titulo: 'Ubicación Privilegiada', sub: 'Vistas directas al Trono del Inca desde nuestras terrazas.' },
-              { icon: 'translate', titulo: 'Atención Bilingüe', sub: 'Personal capacitado en español e inglés para viajeros globales.' },
-              { icon: 'luggage', titulo: 'Logística de Viaje', sub: 'Coordinación de transporte desde la ciudad de Ayacucho.' },
-            ].map(({ icon, titulo, sub }) => (
+              { Icon: Map, titulo: 'Ubicación Privilegiada', sub: 'Vistas directas al Trono del Inca desde nuestras terrazas.' },
+              { Icon: Languages, titulo: 'Atención Bilingüe', sub: 'Personal capacitado en español e inglés para viajeros globales.' },
+              { Icon: Luggage, titulo: 'Logística de Viaje', sub: 'Coordinación de transporte desde la ciudad de Ayacucho.' },
+            ].map(({ Icon, titulo, sub }) => (
               <div key={titulo} style={{ display: 'flex', gap: 20, marginBottom: 20 }}>
-                <span className="material-symbols-outlined" style={{ color: C.gold, fontSize: 24, marginTop: 2, flexShrink: 0 }}>{icon}</span>
+                <Icon color={C.gold} size={24} style={{ marginTop: 2, flexShrink: 0 }} />
                 <div>
                   <h5 style={{ fontFamily: 'Manrope', fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{titulo}</h5>
                   <p style={{ fontSize: 15, color: C.onVariant }}>{sub}</p>
@@ -445,7 +449,7 @@ export default function LandingPage() {
                   onMouseLeave={e => ((e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 16px rgba(0,0,0,0.07)')}>
                   <div style={{ display: 'flex', gap: 2, marginBottom: 16 }}>
                     {Array(t.stars).fill(0).map((_, j) => (
-                      <span key={j} className="material-symbols-outlined" style={{ color: C.gold, fontSize: 20, fontVariationSettings: '"FILL" 1' }}>star</span>
+                      <Star key={j} color={C.gold} size={20} fill={C.gold} />
                     ))}
                   </div>
                   <p style={{ fontSize: 17, fontStyle: 'italic', lineHeight: '28px', color: C.onSurface, marginBottom: 24 }}>{t.texto}</p>
@@ -479,10 +483,10 @@ export default function LandingPage() {
               Encuéntranos en la Plaza Mayor de Vilcashuamán
             </h2>
             {[
-              { icon: 'distance', titulo: 'Desde Ayacucho', sub: '3.5 horas por la carretera vía Cangallo. Ofrecemos traslados privados previa reserva.' },
-              { icon: 'location_on', titulo: 'Dirección', sub: 'Jr. Túpac Amaru S/N, Plaza de Armas de Vilcashuamán, Ayacucho.' },
-              { icon: 'schedule', titulo: 'Horarios', sub: 'Martes a Domingo, 12:00 pm – 9:00 pm' },
-            ].map(({ icon, titulo, sub }) => (
+              { Icon: Route, titulo: 'Desde Ayacucho', sub: '3.5 horas por la carretera vía Cangallo. Ofrecemos traslados privados previa reserva.' },
+              { Icon: MapPin, titulo: 'Dirección', sub: 'Jr. Túpac Amaru S/N, Plaza de Armas de Vilcashuamán, Ayacucho.' },
+              { Icon: Clock, titulo: 'Horarios', sub: 'Martes a Domingo, 12:00 pm – 9:00 pm' },
+            ].map(({ Icon, titulo, sub }) => (
               <div key={titulo} style={{ display: 'flex', gap: 16, marginBottom: 24 }}
                 onMouseEnter={e => {
                   const div = (e.currentTarget as HTMLDivElement).querySelector('div') as HTMLDivElement
@@ -497,7 +501,7 @@ export default function LandingPage() {
                   backgroundColor: `${C.primary}12`, display: 'flex', alignItems: 'center', justifyContent: 'center',
                   transition: 'background-color 0.3s, color 0.3s', color: C.primary,
                 }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 22 }}>{icon}</span>
+                  <Icon size={22} />
                 </div>
                 <div>
                   <h5 style={{ fontFamily: 'Manrope', fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{titulo}</h5>
@@ -508,7 +512,7 @@ export default function LandingPage() {
             <a href="https://maps.app.goo.gl/vilcashuaman" target="_blank" rel="noreferrer"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: C.primary, fontWeight: 700, fontSize: 14, borderBottom: `2px solid ${C.primary}`, paddingBottom: 4, textDecoration: 'none', marginTop: 8 }}>
               Abrir en Google Maps
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
+              <ArrowRight size={18} />
             </a>
           </Reveal>
 
@@ -524,7 +528,7 @@ export default function LandingPage() {
                   padding: 16, borderRadius: '50%', boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
                   animation: 'pulse 2s infinite',
                 }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 36 }}>location_on</span>
+                  <MapPin size={36} />
                 </div>
               </div>
             </div>
@@ -566,16 +570,16 @@ export default function LandingPage() {
           <Reveal delay={500}>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32, marginTop: 40 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span className="material-symbols-outlined">call</span>
+                <Phone size={20} />
                 <span style={{ fontFamily: 'Manrope', fontWeight: 700, fontSize: 14 }}>+51 945 984 518</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span className="material-symbols-outlined">mail</span>
+                <Mail size={20} />
                 <span style={{ fontFamily: 'Manrope', fontWeight: 700, fontSize: 14 }}>hola@vilcasuyo.com</span>
               </div>
               <a href="https://wa.me/51945984518" target="_blank" rel="noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#a8f0a8', textDecoration: 'none', fontWeight: 700, fontSize: 14, fontFamily: 'Manrope' }}>
-                <span className="material-symbols-outlined">chat_bubble</span>
+                <MessageCircle size={20} />
                 WhatsApp
               </a>
             </div>
@@ -603,12 +607,12 @@ export default function LandingPage() {
           ))}
         </div>
         <div style={{ display: 'flex', gap: 20 }}>
-          {['public', 'camera_alt', 'chat_bubble'].map(icon => (
-            <a key={icon} href="#"
+          {[Globe, Camera, MessageCircle].map((Icon, i) => (
+            <a key={i} href="#"
               style={{ color: C.primary, transition: 'transform 0.2s' }}
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1.2)')}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1)')}>
-              <span className="material-symbols-outlined">{icon}</span>
+              <Icon />
             </a>
           ))}
         </div>
