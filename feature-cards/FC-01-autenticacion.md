@@ -27,7 +27,7 @@ El sistema necesita identificar quién está usando el dashboard y qué puede ha
 ```json
 {
   "email": "admin@restaurante.com",
-  "password": "miContraseña123"
+  "password": "password123"
 }
 ```
 
